@@ -9,6 +9,7 @@ public class PlayerAirControl : MonoBehaviour
     [SerializeField] private float airControlForce;
     [SerializeField] private ParticleSystem forwardThrustParticle;
     [SerializeField] private ParticleSystem backwardThrustParticle;
+    [SerializeField] private AudioSource thrustSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,8 @@ public class PlayerAirControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
         {
+            if(!thrustSound.isPlaying)
+                thrustSound.Play();
             if (leftRight > 0)
             {
                 forwardThrustParticle.Play();
@@ -34,11 +37,11 @@ public class PlayerAirControl : MonoBehaviour
                 forwardThrustParticle.Stop();
             }
         }
-
         if (leftRight == 0)
         {
             forwardThrustParticle.Stop();
             backwardThrustParticle.Stop();
+            thrustSound.Stop();
         }
 
         playerRb.AddForce(transform.right * leftRight * airControlForce);

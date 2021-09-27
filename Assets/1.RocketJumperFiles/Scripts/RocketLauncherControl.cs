@@ -15,6 +15,8 @@ public class RocketLauncherControl : MonoBehaviour
     [Header("Rocket Charge")]
     [SerializeField] private float maxHoldTime;
     [SerializeField] private UnityEngine.UI.Image chargeImg;
+    [SerializeField] private ParticleSystem chargingRocketParticle;
+    [SerializeField] private AudioSource chargingRocketSound;
     private float currentHoldTime;
     private float timePerIncreaseForce;
     private int currentSelectedForce;
@@ -22,6 +24,10 @@ public class RocketLauncherControl : MonoBehaviour
     [Header("Firing Rocket")]
     [SerializeField] private GameObject rocketToBeFired;
     [SerializeField] private Vector2 rocketSpawnOffset;
+    [SerializeField] private float timeBetweenShots;
+    [SerializeField] private AudioSource fireRocketSound;
+    private float timeBetweenShotsTimer;
+    private bool canFireRocket = true;
 
     [Header("Rocket")]
     public float rocketSpeed;
@@ -45,7 +51,7 @@ public class RocketLauncherControl : MonoBehaviour
         leftShoulderInitialAngle = leftShoulder.eulerAngles.z;
         leftShoulderAngleDiff = rightShoulderInitialAngle - leftShoulderInitialAngle;
         timePerIncreaseForce = maxHoldTime / forces.Length;
-        Debug.Log(timePerIncreaseForce);
+        chargingRocketParticle.Stop();
     }
 
     // Update is called once per frame
@@ -76,23 +82,47 @@ public class RocketLauncherControl : MonoBehaviour
 
     private void firingRocket()
     {
-        if (Input.GetMouseButton(0) && currentHoldTime < maxHoldTime)
+        if (canFireRocket)
         {
-            chargeImg.fillAmount = currentHoldTime / maxHoldTime;
-            currentHoldTime += Time.deltaTime;
-            if (currentHoldTime > timePerIncreaseForce * (currentSelectedForce + 1))
-                currentSelectedForce += 1;
-            
+            if (Input.GetMouseButton(0) && currentHoldTime < maxHoldTime)
+            {
+                chargingRocketParticle.Play();
+                chargeImg.fillAmount = currentHoldTime / maxHoldTime;
+                currentHoldTime += Time.deltaTime;
+                if (currentHoldTime > timePerIncreaseForce * (currentSelectedForce + 1))
+                    currentSelectedForce += 1;
+                if(!chargingRocketSound.isPlaying)
+                    chargingRocketSound.Play();
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                if (chargingRocketSound.isPlaying)
+                    chargingRocketSound.Stop();
+                fireRocketSound.Play();
+                if (currentSelectedForce >= forces.Length)
+                    currentSelectedForce = forces.Length - 1;
+                forceToApply = forces[currentSelectedForce];
+                Instantiate(rocketToBeFired, rocket.TransformPoint((Vector3)rocketSpawnOffset), rocket.rotation);
+                currentHoldTime = 0;
+                currentSelectedForce = 0;
+                chargeImg.fillAmount = 0;
+                timeBetweenShotsTimer = 0;
+                chargingRocketParticle.Stop();
+                canFireRocket = false;
+            }
         }
-        else if (Input.GetMouseButtonUp(0))
+        else
         {
-            if (currentSelectedForce >= forces.Length)
-                currentSelectedForce = forces.Length - 1;
-            forceToApply = forces[currentSelectedForce];
-            Instantiate(rocketToBeFired, rocket.TransformPoint((Vector3) rocketSpawnOffset), rocket.rotation);
-            currentHoldTime = 0;
-            currentSelectedForce = 0;
-            chargeImg.fillAmount = 0;
+            if (timeBetweenShotsTimer < timeBetweenShots)
+                timeBetweenShotsTimer += Time.deltaTime;
+            else
+                canFireRocket = true;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(rocket.TransformPoint((Vector3)rocketSpawnOffset), sizeOfCast);
     }
 }

@@ -9,6 +9,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 { 
     private Rigidbody2D playerRigidbody;
+    private Animator myAnimator;
 
     [Header("Ground Check")]
     [SerializeField] private Vector2 groundCheckBoxPos;
@@ -26,6 +27,7 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,8 @@ public class CharacterController : MonoBehaviour
             playerRigidbody.drag = groundedDrag;
         else
             playerRigidbody.drag = airDrag;
+
+        myAnimator.SetBool("Grounded", groundCheck());
 
         if (playerRigidbody.velocity.magnitude > maxSpeed)
         {

@@ -11,6 +11,9 @@ public class Rocket : MonoBehaviour
     bool exploded;
     [SerializeField] ParticleSystem rocketParticleSystem;
     [SerializeField] ParticleSystem explosionParticleSystem;
+    [SerializeField] AudioSource explosionSound;
+    float maxVolume = 0.75f;
+    float maxHearingDistance = 150;
     //[SerializeField] private LayerMask layersToDetect;
     // Start is called before the first frame update
     void Start()
@@ -83,6 +86,8 @@ public class Rocket : MonoBehaviour
 
     void RocketExplosionEffect()
     {
+        explosionSound.volume = Mathf.Lerp(0, maxVolume, 1 - Mathf.Clamp(Vector2.Distance(rlc.gameObject.transform.position, explosionPoint) / maxHearingDistance, 0 , 1));
+        explosionSound.Play();
         rocketParticleSystem.transform.parent.gameObject.SetActive(false);
         transform.position = explosionPoint;
         explosionParticleSystem.gameObject.SetActive(true);
