@@ -12,25 +12,31 @@ public class RocketLauncherControl : MonoBehaviour
     private float leftShoulderInitialAngle;
     private float leftShoulderAngleDiff;
 
+    [Header("Rocket Charge")]
+    [SerializeField] private float maxHoldTime;
+    [SerializeField] private UnityEngine.UI.Image chargeImg;
+    private float currentHoldTime;
+    private float timePerIncreaseForce;
+    private int currentSelectedForce;
+
     [Header("Firing Rocket")]
     [SerializeField] private GameObject rocketToBeFired;
     [SerializeField] private Vector2 rocketSpawnOffset;
 
     [Header("Rocket")]
     public float rocketSpeed;
-    public float[] forces;
-    [System.NonSerialized]
-    public float forceToApply;
-    public float explosionRadius;
+    public LayerMask layerToCollideWith;
+
+    [Header("Rocket Hit Detection")]
     public float lengthOfDetectionRay;
     public float sizeOfCast;
+
+    [Header("Rocket Explosion")]
+    public float[] forces;
+    public float explosionRadius;
     public float upwardsModifier;
-    public LayerMask layerToCollideWith;
     public LayerMask ExplosionCanHit;
-    [SerializeField] private float maxHoldTime;
-    private float currentHoldTime;
-    private float timePerIncreaseForce;
-    private int currentSelectedForce;
+    [System.NonSerialized]public float forceToApply;
 
     // Start is called before the first frame update
     void Start()
@@ -72,19 +78,21 @@ public class RocketLauncherControl : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && currentHoldTime < maxHoldTime)
         {
+            chargeImg.fillAmount = currentHoldTime / maxHoldTime;
             currentHoldTime += Time.deltaTime;
             if (currentHoldTime > timePerIncreaseForce * (currentSelectedForce + 1))
                 currentSelectedForce += 1;
+            
         }
-        else if (Input.GetMouseButtonUp(0) || currentHoldTime >= maxHoldTime)
+        else if (Input.GetMouseButtonUp(0))
         {
             if (currentSelectedForce >= forces.Length)
                 currentSelectedForce = forces.Length - 1;
             forceToApply = forces[currentSelectedForce];
-            Debug.Log(currentSelectedForce);
             Instantiate(rocketToBeFired, rocket.TransformPoint((Vector3) rocketSpawnOffset), rocket.rotation);
             currentHoldTime = 0;
             currentSelectedForce = 0;
+            chargeImg.fillAmount = 0;
         }
     }
 }

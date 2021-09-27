@@ -39,7 +39,6 @@ public class CharacterController : MonoBehaviour
         if (playerRigidbody.velocity.magnitude > maxSpeed)
         {
             playerRigidbody.velocity = playerRigidbody.velocity.normalized * maxSpeed;
-            Debug.Log(playerRigidbody.velocity.magnitude);
         }
     }
 

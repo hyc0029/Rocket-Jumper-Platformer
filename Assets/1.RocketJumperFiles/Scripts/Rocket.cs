@@ -9,6 +9,8 @@ public class Rocket : MonoBehaviour
     protected ContactFilter2D cf;
     Vector2 explosionPoint;
     bool exploded;
+    [SerializeField] ParticleSystem rocketParticleSystem;
+    [SerializeField] ParticleSystem explosionParticleSystem;
     //[SerializeField] private LayerMask layersToDetect;
     // Start is called before the first frame update
     void Start()
@@ -18,23 +20,32 @@ public class Rocket : MonoBehaviour
         myRB2D.velocity = transform.right * rlc.rocketSpeed;
         cf.useLayerMask = true;
         cf.SetLayerMask(rlc.layerToCollideWith);
+        explosionParticleSystem.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!exploded)
+        if (!exploded)
             RocketHitDetection();
+        else
+        {
+            if (!explosionParticleSystem.IsAlive())
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     void RocketHitDetection()
     {
         List<RaycastHit2D> circleHits = new List<RaycastHit2D>();
-        Physics2D.CircleCast(transform.position, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay);
+        Physics2D.CircleCast(transform.position - transform.right * rlc.lengthOfDetectionRay, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay);
         if (circleHits.Count > 0)
         {
             explosionPoint = circleHits[0].point;
             RocketExplosion();
+            RocketExplosionEffect();
         }
     }
 
@@ -70,17 +81,30 @@ public class Rocket : MonoBehaviour
         }
     }
 
+    void RocketExplosionEffect()
+    {
+        rocketParticleSystem.transform.parent.gameObject.SetActive(false);
+        transform.position = explosionPoint;
+        explosionParticleSystem.gameObject.SetActive(true);
+        explosionParticleSystem.Play();
+    }
+
+
+
+
     private void OnDrawGizmos()
     {
-        
-        List<RaycastHit2D> circleHits = new List<RaycastHit2D>();
-        Physics2D.CircleCast(transform.position, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay);
-        Gizmos.color = Color.green;
-        if (circleHits.Count > 0)
+        if (rlc != null)
         {
-            Gizmos.DrawLine(transform.position, circleHits[0].point);
-            Gizmos.DrawWireSphere(transform.position + transform.right * (circleHits[0].point - (Vector2)transform.position).magnitude, rlc.sizeOfCast);
-            Gizmos.DrawWireSphere(explosionPoint, rlc.explosionRadius);
+            List<RaycastHit2D> circleHits = new List<RaycastHit2D>();
+            Physics2D.CircleCast(transform.position - transform.right * rlc.lengthOfDetectionRay, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay);
+            Gizmos.color = Color.green;
+            if (circleHits.Count > 0)
+            {
+                Gizmos.DrawLine(transform.position - transform.right * rlc.lengthOfDetectionRay, circleHits[0].point);
+                Gizmos.DrawWireSphere(transform.position + transform.right * (circleHits[0].point - (Vector2)transform.position).magnitude, rlc.sizeOfCast);
+                Gizmos.DrawWireSphere(explosionPoint, rlc.explosionRadius);
+            }
         }
     }
 
