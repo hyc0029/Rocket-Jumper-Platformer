@@ -10,18 +10,18 @@ public class CharacterController : MonoBehaviour
 { 
     private Rigidbody2D playerRigidbody;
 
-    [Header("Movement")]
-    [SerializeField] private float maxSpeed;
-    private Vector2 playerVelocity;
-
-    [Header("Jump")]
-    [SerializeField] private float jumpForce;
-    
     [Header("Ground Check")]
     [SerializeField] private Vector2 groundCheckBoxPos;
     [SerializeField] private Vector2 groundCheckBoxSize;
     [SerializeField] private LayerMask groundMask;
-    private bool grounded;
+
+    [Header("Physics")]
+    [SerializeField] private float groundedDrag;
+    [SerializeField] private float airDrag;
+
+    [Header("Limiter")]
+    [SerializeField] private float maxSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,32 +31,24 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        groundCheck();
-        movement();
-    }
-
-    private void movement()
-    {
-        float leftRight = (Input.GetKey(KeyCode.D) ? 1 : 0) - (Input.GetKey(KeyCode.A) ? 1 : 0);
-        if (leftRight != 0)
-            playerVelocity.x = leftRight * maxSpeed;
+        if (groundCheck())
+            playerRigidbody.drag = groundedDrag;
         else
-            playerVelocity.x = 0;
+            playerRigidbody.drag = airDrag;
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
-            playerRigidbody.velocity = playerRigidbody.velocity + Vector2.up * jumpForce;
-
-        playerVelocity.y = playerRigidbody.velocity.y;
-
-        playerRigidbody.velocity = playerVelocity;
+        if (playerRigidbody.velocity.magnitude > maxSpeed)
+        {
+            playerRigidbody.velocity = playerRigidbody.velocity.normalized * maxSpeed;
+            Debug.Log(playerRigidbody.velocity.magnitude);
+        }
     }
 
-    private void groundCheck()
+    private bool groundCheck()
     {
         if (Physics2D.OverlapBox(transform.TransformPoint(groundCheckBoxPos), groundCheckBoxSize, 0, groundMask))
-            grounded = true;
+            return true;
         else
-            grounded = false;
+            return false;
     }
 
     private void OnDrawGizmos()
