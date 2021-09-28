@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour
 { 
     private Rigidbody2D playerRigidbody;
     private Animator myAnimator;
+    public Transform myBodyCtr;
 
     [Header("Ground Check")]
     [SerializeField] private Vector2 groundCheckBoxPos;
@@ -39,6 +40,17 @@ public class CharacterController : MonoBehaviour
             playerRigidbody.drag = airDrag;
 
         myAnimator.SetBool("Grounded", groundCheck());
+
+        
+        if (playerRigidbody.velocity.x > 0)
+        {
+            myBodyCtr.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (playerRigidbody.velocity.x < 0)
+        {
+            myBodyCtr.transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+        
 
         if (playerRigidbody.velocity.magnitude > maxSpeed)
         {

@@ -41,3 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackBody
+    uniqueID: 1284339589
+    locked: 0
+  - name: BaseGlow
+    uniqueID: 1721590129
+    locked: 0
+  - name: BaseBody
+    uniqueID: 1707092053
+    locked: 0
+  - name: BaseDeco
+    uniqueID: 3388784945
+    locked: 0
+  - name: OutLimbGlow
+    uniqueID: 1075490401
+    locked: 0
+  - name: OutLimbBase
+    uniqueID: 4009167
+    locked: 0
+  - name: OutLimbDeco
+    uniqueID: 1070587519
+    locked: 0

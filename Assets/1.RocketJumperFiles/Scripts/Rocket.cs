@@ -14,6 +14,7 @@ public class Rocket : MonoBehaviour
     [SerializeField] AudioSource explosionSound;
     float maxVolume = 0.75f;
     float maxHearingDistance = 150;
+    Vector2 oldPos;
     //[SerializeField] private LayerMask layersToDetect;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Rocket : MonoBehaviour
         cf.useLayerMask = true;
         cf.SetLayerMask(rlc.layerToCollideWith);
         explosionParticleSystem.gameObject.SetActive(false);
+        oldPos = transform.position;
     }
 
     // Update is called once per frame
@@ -43,13 +45,15 @@ public class Rocket : MonoBehaviour
     void RocketHitDetection()
     {
         List<RaycastHit2D> circleHits = new List<RaycastHit2D>();
-        Physics2D.CircleCast(transform.position - transform.right * rlc.lengthOfDetectionRay, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay);
+        //Physics2D.CircleCast(transform.position - transform.right * rlc.lengthOfDetectionRay, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay);
+        Physics2D.CircleCast(oldPos, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay*2);
         if (circleHits.Count > 0)
         {
             explosionPoint = circleHits[0].point;
             RocketExplosion();
             RocketExplosionEffect();
         }
+        oldPos = transform.position;
     }
 
     void RocketExplosion()
