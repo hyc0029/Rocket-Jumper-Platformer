@@ -13809,8 +13809,9 @@ MonoBehaviour:
   rocketToBeFired: {fileID: 4652826233588061646, guid: 5e0a085b2d269fe418604c6feedaef28, type: 3}
   rocketSpawnOffset: {x: 10, y: 0}
   timeBetweenShots: 0.5
+  additionalTimeBetweenShots: 0.25
   fireRocketSound: {fileID: 1344663817}
-  rocketSpeed: 150
+  rocketSpeed: 60
   layerToCollideWith:
     serializedVersion: 2
     m_Bits: 65
@@ -19516,7 +19517,7 @@ MonoBehaviour:
   cameraMoveInPercentage: 0.25
   amountOfCameraLead: 25
   idleUpwardOffset: 5
-  distanceFromMouseModifier: 0.25
+  distanceFromMouseModifier: 0.3
   minXMouseDeadzone: -10
   maxXMouseDeadzone: 10
   minYMouseDeadzone: -5
@@ -20676,7 +20677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021168077}
   m_LocalRotation: {x: -0, y: -0, z: -0.6828866, w: 0.7305244}
-  m_LocalPosition: {x: 2.41, y: -1.02, z: 0}
+  m_LocalPosition: {x: 2.41, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 670089219}

@@ -27,7 +27,9 @@ public class RocketLauncherControl : MonoBehaviour
     [SerializeField] private GameObject rocketToBeFired;
     [SerializeField] private Vector2 rocketSpawnOffset;
     [SerializeField] private float timeBetweenShots;
+    [SerializeField] private float additionalTimeBetweenShots;
     [SerializeField] private AudioSource fireRocketSound;
+    private float actualTimeBetweenShots;
     private float timeBetweenShotsTimer;
     private bool canFireRocket = true;
 
@@ -54,7 +56,7 @@ public class RocketLauncherControl : MonoBehaviour
         rightShoulderInitialAngle = rightShoulder.eulerAngles.z;
         leftShoulderInitialAngle = leftShoulder.eulerAngles.z;
         leftShoulderAngleDiff = rightShoulderInitialAngle - leftShoulderInitialAngle;
-        timePerIncreaseForce = maxHoldTime / forces.Length;
+        timePerIncreaseForce = maxHoldTime / (forces.Length-1);
         chargingRocketParticle.Stop();
     }
 
@@ -118,6 +120,7 @@ public class RocketLauncherControl : MonoBehaviour
                 fireRocketSound.Play();
                 if (currentSelectedForce >= forces.Length)
                     currentSelectedForce = forces.Length - 1;
+                actualTimeBetweenShots = timeBetweenShots + additionalTimeBetweenShots * currentSelectedForce;
                 forceToApply = forces[currentSelectedForce];
                 Instantiate(rocketToBeFired, rocket.TransformPoint((Vector3)rocketSpawnOffset), rocket.rotation);
                 currentHoldTime = 0;
@@ -130,7 +133,7 @@ public class RocketLauncherControl : MonoBehaviour
         }
         else
         {
-            if (timeBetweenShotsTimer < timeBetweenShots)
+            if (timeBetweenShotsTimer < actualTimeBetweenShots)
                 timeBetweenShotsTimer += Time.deltaTime;
             else
                 canFireRocket = true;
