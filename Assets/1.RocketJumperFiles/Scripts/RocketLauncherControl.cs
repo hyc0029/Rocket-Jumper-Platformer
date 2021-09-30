@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RocketLauncherControl : MonoBehaviour
 {
+    private Transform bodyRot;
+
     [Header("Rocket Aimming")]
     [SerializeField] private Transform rightShoulder;
     [SerializeField] private Transform leftShoulder;
@@ -47,6 +49,8 @@ public class RocketLauncherControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bodyRot = transform.GetChild(0);
+
         rightShoulderInitialAngle = rightShoulder.eulerAngles.z;
         leftShoulderInitialAngle = leftShoulder.eulerAngles.z;
         leftShoulderAngleDiff = rightShoulderInitialAngle - leftShoulderInitialAngle;
@@ -67,17 +71,22 @@ public class RocketLauncherControl : MonoBehaviour
 
         Vector2 vectorToTarget = mousePos - (Vector2)rocket.position;
 
-        float angle = (Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg) + rightShoulderInitialAngle;
+        float angle;
+
+        if(bodyRot.localEulerAngles.y == 0)
+            angle = (Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg) + rightShoulderInitialAngle;
+        else
+            angle = (Mathf.Atan2(vectorToTarget.x, vectorToTarget.y) * Mathf.Rad2Deg) + 180;
 
         Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        rightShoulder.rotation = Quaternion.Slerp(rightShoulder.rotation, rot, 1);
+        rightShoulder.localRotation = Quaternion.Slerp(rightShoulder.rotation, rot, 1);
 
         float leftAngle = angle - leftShoulderAngleDiff;
 
         Quaternion lRot = Quaternion.AngleAxis(leftAngle, Vector3.forward);
 
-        leftShoulder.rotation = Quaternion.Slerp(leftShoulder.rotation, lRot, 1);
+        leftShoulder.localRotation = Quaternion.Slerp(leftShoulder.rotation, lRot, 1);
     }
 
     private void firingRocket()
@@ -86,11 +95,19 @@ public class RocketLauncherControl : MonoBehaviour
         {
             if (Input.GetMouseButton(0) && currentHoldTime < maxHoldTime)
             {
-                chargingRocketParticle.Play();
-                chargeImg.fillAmount = currentHoldTime / maxHoldTime;
                 currentHoldTime += Time.deltaTime;
-                if (currentHoldTime > timePerIncreaseForce * (currentSelectedForce + 1))
+                if (currentHoldTime > timePerIncreaseForce * Mathf.Clamp((currentSelectedForce + 1), 0, forces.Length))
                     currentSelectedForce += 1;
+                if (currentHoldTime >= maxHoldTime)
+                {
+                    chargeImg.fillAmount = 1;
+                    chargingRocketParticle.Stop();
+                }
+                else
+                {
+                    chargingRocketParticle.Play();
+                    chargeImg.fillAmount = currentHoldTime / maxHoldTime;
+                }
                 if(!chargingRocketSound.isPlaying)
                     chargingRocketSound.Play();
             }

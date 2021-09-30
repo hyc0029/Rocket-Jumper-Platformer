@@ -10,7 +10,7 @@ public class CharacterController : MonoBehaviour
 { 
     private Rigidbody2D playerRigidbody;
     private Animator myAnimator;
-    public Transform myBodyCtr;
+    public Transform myBodyRotationControl;
 
     [Header("Ground Check")]
     [SerializeField] private Vector2 groundCheckBoxPos;
@@ -42,13 +42,13 @@ public class CharacterController : MonoBehaviour
         myAnimator.SetBool("Grounded", groundCheck());
 
         
-        if (playerRigidbody.velocity.x > 0)
+        if (playerRigidbody.velocity.x > 5)
         {
-            myBodyCtr.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            myBodyRotationControl.transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
-        else if (playerRigidbody.velocity.x < 0)
+        else if (playerRigidbody.velocity.x < -5)
         {
-            myBodyCtr.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            myBodyRotationControl.transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
         
 
@@ -58,7 +58,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    private bool groundCheck()
+    public bool groundCheck()
     {
         if (Physics2D.OverlapBox(transform.TransformPoint(groundCheckBoxPos), groundCheckBoxSize, 0, groundMask))
             return true;
