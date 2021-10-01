@@ -15,11 +15,11 @@ D:/Github/Rocket Jumper Platformer
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52199
+59959
 Successfully changed project path to: D:/Github/Rocket Jumper Platformer
 D:/Github/Rocket Jumper Platformer
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 41.24 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 40.36 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -36,70 +36,1599 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006903 seconds.
+Registered in 0.006698 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 43.79 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 42.73 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.266 seconds
+- Completed reload, in  1.141 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001929 seconds.
+Registered in 0.001414 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 41.58 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 41.11 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.960 seconds
+- Completed reload, in  0.997 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2426 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.0 MB.
-System memory in use after: 113.8 MB.
+Unloading 2441 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.3 MB.
+System memory in use after: 116.1 MB.
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2842.
-Total: 3.324700 ms (FindLiveObjects: 0.244900 ms CreateObjectMapping: 0.119200 ms MarkObjects: 1.943500 ms  DeleteObjects: 1.015800 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2857.
+Total: 3.003500 ms (FindLiveObjects: 0.256500 ms CreateObjectMapping: 0.114800 ms MarkObjects: 1.626400 ms  DeleteObjects: 1.004400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/1.RocketJumperFiles/Materials/Characters/blueGlow.mat
-  artifactKey: Guid(d36975f605986a74e92d38e67876a9d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/1.RocketJumperFiles/Materials/Characters/blueGlow.mat using Guid(d36975f605986a74e92d38e67876a9d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2389f44cbb5106acfb6aaf9e3792fbf') in 0.215663 seconds
-  Import took 0.219282 seconds .
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Deco.png
+  artifactKey: Guid(4111c9a1ec5fbe245ab3cc79aa14f2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Deco.png using Guid(4111c9a1ec5fbe245ab3cc79aa14f2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cedd5d3d049a5436fc7c4d9833a7bd90') in 0.167687 seconds
+  Import took 0.336841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Glow.png
+  artifactKey: Guid(f7fe9a5e1ddf63949a0d36558294a2b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Glow.png using Guid(f7fe9a5e1ddf63949a0d36558294a2b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5000691c17508cab84ce8b6369384678') in 0.020806 seconds
+  Import took 0.091792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png
+  artifactKey: Guid(b1d140667fe36ec4fb4e9ae3faad9b15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png using Guid(b1d140667fe36ec4fb4e9ae3faad9b15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d59c14c3be1f6812cb11c5f0b3ea23f') in 0.333142 seconds
+  Import took 0.403322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base.png
+  artifactKey: Guid(b92fa247d0968c64cafd597833f49773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base.png using Guid(b92fa247d0968c64cafd597833f49773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ceea4fbba78f64c7b0c341213ec0b71') in 0.006749 seconds
+  Import took 0.031519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Base.png
+  artifactKey: Guid(e6a033fcad41a0d4887f0656a53aefdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Base.png using Guid(e6a033fcad41a0d4887f0656a53aefdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e96e50b37f05c693383670c56dc73a88') in 0.350184 seconds
+  Import took 0.412902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Deco.png
+  artifactKey: Guid(f1885b76224fef346893db8ce41c3dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Deco.png using Guid(f1885b76224fef346893db8ce41c3dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '984fffb77a03263aa0638a0a5c0a036c') in 0.023047 seconds
+  Import took 0.221906 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy
+  artifactKey: Guid(177bc7670fc539a4a8178aaa3a0ca43a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy using Guid(177bc7670fc539a4a8178aaa3a0ca43a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27bf485591624ba50b4577db123ac68') in 0.002750 seconds
+  Import took 0.044896 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Base.png
+  artifactKey: Guid(9818ff39d24a4194d9d9505c3fb02665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Base.png using Guid(9818ff39d24a4194d9d9505c3fb02665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5164a639e2f8604abcd72e3f8846ab1') in 0.006991 seconds
+  Import took 0.044620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Glow.png
+  artifactKey: Guid(f1a7b1703be2c0d4e9e55f159c081bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Glow.png using Guid(f1a7b1703be2c0d4e9e55f159c081bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccab30ddab148e78fa93099710dcb416') in 0.577326 seconds
+  Import took 1.104300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Glow.png
+  artifactKey: Guid(4a2edd94fcb0de044934a2fb6728f995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Glow.png using Guid(4a2edd94fcb0de044934a2fb6728f995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c19b4684f9d348378e1799dc181fd562') in 0.021197 seconds
+  Import took 0.789107 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Base.png
+  artifactKey: Guid(e1ff0ddb174e01647925a12388176917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Base.png using Guid(e1ff0ddb174e01647925a12388176917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0975c7c39544b52930e766f03b1dbc1') in 0.007005 seconds
+  Import took 0.770557 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Base.png
+  artifactKey: Guid(41dd40386c3e801418c5075fd775a0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Base.png using Guid(41dd40386c3e801418c5075fd775a0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92e71e8a22bce53e99ad0d816e414314') in 0.075679 seconds
+  Import took 0.449543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Base.png
+  artifactKey: Guid(9818ff39d24a4194d9d9505c3fb02665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Base.png using Guid(9818ff39d24a4194d9d9505c3fb02665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5164a639e2f8604abcd72e3f8846ab1') in 0.034043 seconds
+  Import took 0.621505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Base_Deco.png
+  artifactKey: Guid(9743706639cce354ab2676129b341e89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Base_Deco.png using Guid(9743706639cce354ab2676129b341e89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284752421cf180d14493f6562582c995') in 0.006594 seconds
+  Import took 0.798190 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Deco.png
+  artifactKey: Guid(3d4c78d44e586704885b3117e5b62ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Deco.png using Guid(3d4c78d44e586704885b3117e5b62ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99648e174a732e3900b3810dd2cb046a') in 0.504924 seconds
+  Import took 0.508026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Deco.png
+  artifactKey: Guid(8e1b15d33ab1f314eb3ef0db90b76946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Deco.png using Guid(8e1b15d33ab1f314eb3ef0db90b76946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e95aa193d736311dea4eebf1e38499a') in 0.006480 seconds
+  Import took 0.023064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Deco.png
+  artifactKey: Guid(87d8d9632ee5e9d4b88dc5ef629a355a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Deco.png using Guid(87d8d9632ee5e9d4b88dc5ef629a355a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab471c2d6769448f218c9f3ef5ff7b08') in 0.020694 seconds
+  Import took 0.024648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Body_Base.png
+  artifactKey: Guid(6f85d24645debbc4a9b58d819769c45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Body_Base.png using Guid(6f85d24645debbc4a9b58d819769c45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '746a3a99905a3826bcb743b6f3cd8b7c') in 0.007532 seconds
+  Import took 0.040138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Base2.png
+  artifactKey: Guid(fd9a37cc91b54964eba0f9d684bfa424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Base2.png using Guid(fd9a37cc91b54964eba0f9d684bfa424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe9e27366006714c901ef1511d910a21') in 0.008072 seconds
+  Import took 0.530145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Body_Glow.png
+  artifactKey: Guid(2aa66afcc1a13e34b882452f4d416244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Body_Glow.png using Guid(2aa66afcc1a13e34b882452f4d416244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbdebecdb6ab876144af83800dfbae8e') in 0.067001 seconds
+  Import took 0.275151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Deco.png
+  artifactKey: Guid(8f66671b083d57a48910195aeb2a1f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Deco.png using Guid(8f66671b083d57a48910195aeb2a1f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2d69224b8908e8d2763893855921d95') in 0.014094 seconds
+  Import took 0.017338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Glow.png
+  artifactKey: Guid(364d4692a5954a4419d5edf4a1f39bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Glow.png using Guid(364d4692a5954a4419d5edf4a1f39bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d8d0791c9ee64dc8e071e3cbd18ff78') in 0.448962 seconds
+  Import took 0.451840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Base.png
+  artifactKey: Guid(6fcaf8ec6f3a13c449862a12db37e88c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Base.png using Guid(6fcaf8ec6f3a13c449862a12db37e88c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e9a7a5710891d80bf94809fb2c8c3d') in 0.007296 seconds
+  Import took 0.067444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Deco.png
+  artifactKey: Guid(f4492b66a4402fb449fbd73cc47ece11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Deco.png using Guid(f4492b66a4402fb449fbd73cc47ece11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.004487 seconds
+  ERROR: Build asset version error: assets/1.rocketjumperfiles/art/characters/human enemy/arm_bottom_deco.png.meta in SourceAssetDB has modification time of '2021-09-28T01:20:31.2468403Z' while content on disk has modification time of '2021-10-01T16:35:09.3546089Z'
+  Import took 0.007463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Base.png
+  artifactKey: Guid(9435c85824c493943b51e9460baae2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Base.png using Guid(9435c85824c493943b51e9460baae2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7359cd5d0e2ec4944766a4df1a053a41') in 0.007885 seconds
+  Import took 0.028276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.559362 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Base.png
+  artifactKey: Guid(9818ff39d24a4194d9d9505c3fb02665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Base.png using Guid(9818ff39d24a4194d9d9505c3fb02665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b24839c19a8a437dbaa52d75b51d22') in 0.049536 seconds
+  Import took 0.072136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000344 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Deco.png
+  artifactKey: Guid(4111c9a1ec5fbe245ab3cc79aa14f2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Deco.png using Guid(4111c9a1ec5fbe245ab3cc79aa14f2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccb8884c2b6e183df9e3a193ee5a7aa7') in 0.014543 seconds
+  Import took 0.017792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Glow.png
+  artifactKey: Guid(f7fe9a5e1ddf63949a0d36558294a2b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Glow.png using Guid(f7fe9a5e1ddf63949a0d36558294a2b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76601c12a4fc3723c0f69c07c13a6494') in 0.012441 seconds
+  Import took 0.015792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png
+  artifactKey: Guid(b1d140667fe36ec4fb4e9ae3faad9b15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png using Guid(b1d140667fe36ec4fb4e9ae3faad9b15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d1e24a2b2899c6585a1513540d5293') in 0.009665 seconds
+  Import took 0.012833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000310 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base.png
+  artifactKey: Guid(b92fa247d0968c64cafd597833f49773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base.png using Guid(b92fa247d0968c64cafd597833f49773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96fd0450db65bf07439833013d3fd2f6') in 0.009793 seconds
+  Import took 0.012969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Base.png
+  artifactKey: Guid(e6a033fcad41a0d4887f0656a53aefdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Base.png using Guid(e6a033fcad41a0d4887f0656a53aefdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db86540f5b8583dd54340125f33ead22') in 0.010078 seconds
+  Import took 0.013372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Deco.png
+  artifactKey: Guid(f1885b76224fef346893db8ce41c3dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Deco.png using Guid(f1885b76224fef346893db8ce41c3dd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faf34995daf81d1c640a8037ef896f03') in 0.011073 seconds
+  Import took 0.023679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Glow.png
+  artifactKey: Guid(f1a7b1703be2c0d4e9e55f159c081bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Glow.png using Guid(f1a7b1703be2c0d4e9e55f159c081bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f3366e33eae4f3c5d4d9606fcd93f78') in 0.011558 seconds
+  Import took 0.014785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Glow.png
+  artifactKey: Guid(4a2edd94fcb0de044934a2fb6728f995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Glow.png using Guid(4a2edd94fcb0de044934a2fb6728f995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aa9c8bb9f20f5c71637895db9db8dc8') in 0.011789 seconds
+  Import took 0.015125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Base.png
+  artifactKey: Guid(e1ff0ddb174e01647925a12388176917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Base.png using Guid(e1ff0ddb174e01647925a12388176917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6051585486a53d4e6e1fe9afed732a1') in 0.017524 seconds
+  Import took 0.022524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Base.png
+  artifactKey: Guid(41dd40386c3e801418c5075fd775a0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Feet_Base.png using Guid(41dd40386c3e801418c5075fd775a0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77eff61d4ec5418349cbd0364b8a3547') in 0.013793 seconds
+  Import took 0.017477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Base_Deco.png
+  artifactKey: Guid(9743706639cce354ab2676129b341e89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Base_Deco.png using Guid(9743706639cce354ab2676129b341e89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0249db672bd1dbd4ac2de7d5b44b367f') in 0.012762 seconds
+  Import took 0.016077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Deco.png
+  artifactKey: Guid(3d4c78d44e586704885b3117e5b62ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Deco.png using Guid(3d4c78d44e586704885b3117e5b62ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '286776c1790a0c25f167fb7489c2f457') in 0.013083 seconds
+  Import took 0.016921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Deco.png
+  artifactKey: Guid(8e1b15d33ab1f314eb3ef0db90b76946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Deco.png using Guid(8e1b15d33ab1f314eb3ef0db90b76946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce0743069d06b5774b56db48c9670c3e') in 0.013934 seconds
+  Import took 0.017851 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Deco.png
+  artifactKey: Guid(87d8d9632ee5e9d4b88dc5ef629a355a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Deco.png using Guid(87d8d9632ee5e9d4b88dc5ef629a355a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ad5c8c963d97fed526a9ecda63ece6b') in 0.010341 seconds
+  Import took 0.014362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Body_Base.png
+  artifactKey: Guid(6f85d24645debbc4a9b58d819769c45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Body_Base.png using Guid(6f85d24645debbc4a9b58d819769c45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a3afc46174c7969b9f960bb9dcf6b72') in 0.011465 seconds
+  Import took 0.014977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Base2.png
+  artifactKey: Guid(fd9a37cc91b54964eba0f9d684bfa424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Base2.png using Guid(fd9a37cc91b54964eba0f9d684bfa424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f25886ff01dacade50cda563dc9aa419') in 0.012353 seconds
+  Import took 0.015805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Body_Glow.png
+  artifactKey: Guid(2aa66afcc1a13e34b882452f4d416244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Body_Glow.png using Guid(2aa66afcc1a13e34b882452f4d416244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17dbb18f84d68d2fd57471e6a141f7cc') in 0.012763 seconds
+  Import took 0.016990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Deco.png
+  artifactKey: Guid(8f66671b083d57a48910195aeb2a1f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Head_Deco.png using Guid(8f66671b083d57a48910195aeb2a1f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c20931f8f4937956f8b63e6300b4ef4e') in 0.011686 seconds
+  Import took 0.015364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Glow.png
+  artifactKey: Guid(364d4692a5954a4419d5edf4a1f39bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Hand_Glow.png using Guid(364d4692a5954a4419d5edf4a1f39bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87114571f78d60b2f3e5e9f415ab2fa1') in 0.010171 seconds
+  Import took 0.013576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Base.png
+  artifactKey: Guid(6fcaf8ec6f3a13c449862a12db37e88c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Base.png using Guid(6fcaf8ec6f3a13c449862a12db37e88c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7399ef7e30dc169f4390b5b9e615cd4d') in 0.011582 seconds
+  Import took 0.014687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Deco.png
+  artifactKey: Guid(f4492b66a4402fb449fbd73cc47ece11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Bottom_Deco.png using Guid(f4492b66a4402fb449fbd73cc47ece11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba0a032dfb13c354aa49ec0f1fce3417') in 0.012198 seconds
+  Import took 0.022625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Base.png
+  artifactKey: Guid(9435c85824c493943b51e9460baae2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Base.png using Guid(9435c85824c493943b51e9460baae2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eabcd865840bb969f7c3bbb997ac154') in 0.011185 seconds
+  Import took 0.014654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002367 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Base.png
+  artifactKey: Guid(9435c85824c493943b51e9460baae2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Top_Base.png using Guid(9435c85824c493943b51e9460baae2d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eabcd865840bb969f7c3bbb997ac154') in 0.011352 seconds
+  Import took 0.014757 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 414.695368 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg Top Glow.png
+  artifactKey: Guid(b1d140667fe36ec4fb4e9ae3faad9b15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg Top Glow.png using Guid(b1d140667fe36ec4fb4e9ae3faad9b15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b05713ca4f7f74b77c4c4b1fb0836eb0') in 0.013451 seconds
+  Import took 0.036124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 227.325883 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base (1).png
+  artifactKey: Guid(7500326c64714f240af556939687ae05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base (1).png using Guid(7500326c64714f240af556939687ae05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10d949fafaa2d5f68ecf9d6650103479') in 0.007504 seconds
+  Import took 0.010962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.331050 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base (1).png
+  artifactKey: Guid(7500326c64714f240af556939687ae05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base (1).png using Guid(7500326c64714f240af556939687ae05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18adf542daf604883f1a1a4e04b51f7') in 0.012760 seconds
+  Import took 0.016508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020311 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base (1).png
+  artifactKey: Guid(7500326c64714f240af556939687ae05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Arm_Top_Base (1).png using Guid(7500326c64714f240af556939687ae05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18adf542daf604883f1a1a4e04b51f7') in 0.009588 seconds
+  Import took 0.013022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.476606 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png
+  artifactKey: Guid(d4545e109163ac9458b5380d0714824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png using Guid(d4545e109163ac9458b5380d0714824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ada2ca180bedf936e14a52dae104397') in 0.006780 seconds
+  Import took 0.010296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001128 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png
+  artifactKey: Guid(d4545e109163ac9458b5380d0714824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png using Guid(d4545e109163ac9458b5380d0714824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ada2ca180bedf936e14a52dae104397') in 0.006341 seconds
+  Import took 0.010453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.984384 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png
+  artifactKey: Guid(d4545e109163ac9458b5380d0714824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png using Guid(d4545e109163ac9458b5380d0714824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '697c34248b948054385637f4f30b5691') in 0.011999 seconds
+  Import took 0.015755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020899 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png
+  artifactKey: Guid(d4545e109163ac9458b5380d0714824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Human Enemy/Leg_Bottom_Glow.png using Guid(d4545e109163ac9458b5380d0714824a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '697c34248b948054385637f4f30b5691') in 0.010656 seconds
+  Import took 0.014068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 132.085948 seconds.
+  path: Assets/1.RocketJumperFiles/Materials/Characters/orangeGlow.mat
+  artifactKey: Guid(da88154f70db92649b8d8ab097bab3f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Materials/Characters/orangeGlow.mat using Guid(da88154f70db92649b8d8ab097bab3f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fb9ca4c335500d18822cfe608cbcda0') in 0.147937 seconds
+  Import took 0.152089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 164.705005 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy
+  artifactKey: Guid(1d0611d5f4976ae4ab0d5100b3e378dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy using Guid(1d0611d5f4976ae4ab0d5100b3e378dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a245431cb170a3b24c3e7ef59948416') in 0.002505 seconds
+  Import took 0.006309 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056761 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Base.png
+  artifactKey: Guid(496f0dd72576bd74a99fd896504d4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Base.png using Guid(496f0dd72576bd74a99fd896504d4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7308dda22b86bd58a962d769ad00629') in 0.288780 seconds
+  Import took 0.292059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Top_Base.png
+  artifactKey: Guid(a5b3d4b60af753f4eb7fa20ddfab94cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Top_Base.png using Guid(a5b3d4b60af753f4eb7fa20ddfab94cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbe7ff8e5b1107e7aa6a3e509a5d18d3') in 0.371413 seconds
+  Import took 0.374510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Leg_Bottom.png
+  artifactKey: Guid(268e0ef8dc07b464bacec14f26359c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Leg_Bottom.png using Guid(268e0ef8dc07b464bacec14f26359c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2551f49a3d1463e46bd2d1b0413270b') in 0.203772 seconds
+  Import took 0.207075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000778 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Glow.png
+  artifactKey: Guid(9d8333d7770f83e4f931ebe3695af791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Glow.png using Guid(9d8333d7770f83e4f931ebe3695af791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd9be930c36481c7c1a373e7037c0964') in 0.476545 seconds
+  Import took 0.513778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Deco.png
+  artifactKey: Guid(14ee8aa34233c7641ba3ee04998cedb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Deco.png using Guid(14ee8aa34233c7641ba3ee04998cedb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '109917c6a72ffc1f465ed1aaa38732d2') in 0.907344 seconds
+  Import took 0.910500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Top_Deco.png
+  artifactKey: Guid(aa2a4112997baae4abca39bf35ba9d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Top_Deco.png using Guid(aa2a4112997baae4abca39bf35ba9d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9614e0477e4570003ffe7b0eafafea27') in 0.709508 seconds
+  Import took 0.712673 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Deco.png
+  artifactKey: Guid(8bc992d5e0d369f4b85a13239a1c9741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Deco.png using Guid(8bc992d5e0d369f4b85a13239a1c9741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57be5fd3ed31cc1e07be8ce8554e57d3') in 0.933229 seconds
+  Import took 0.936487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Glow.png
+  artifactKey: Guid(5315f185c949d78489427567ef0a46b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Glow.png using Guid(5315f185c949d78489427567ef0a46b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12a773430d5a54cf40525fe6b244dd23') in 0.312534 seconds
+  Import took 0.315904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Leg_Top.png
+  artifactKey: Guid(c969d4ced8a4b97458476073fa1ea76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Leg_Top.png using Guid(c969d4ced8a4b97458476073fa1ea76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae229cc98e719dd394b4609bdef92715') in 0.476465 seconds
+  Import took 0.479449 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Top_Base.png
+  artifactKey: Guid(fb72675560ff70942a7c08104e78d4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Top_Base.png using Guid(fb72675560ff70942a7c08104e78d4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c81d1e2103e830264efd734dea3db5') in 0.850873 seconds
+  Import took 0.854092 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Deco.png
+  artifactKey: Guid(cfe71348fe67f6f48af121addd37d84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Deco.png using Guid(cfe71348fe67f6f48af121addd37d84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd6dfee3c28d422d922a3ecdfcba4f19') in 0.007871 seconds
+  Import took 0.011141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Leg_Bottom.png
+  artifactKey: Guid(727c5dd8898cf584ab45c9c771d2e205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Leg_Bottom.png using Guid(727c5dd8898cf584ab45c9c771d2e205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ab83168fe012d8e75ee240626193e6') in 0.286285 seconds
+  Import took 0.289399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Base.png
+  artifactKey: Guid(213f566faf257a64898975780838a159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Base.png using Guid(213f566faf257a64898975780838a159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38f81ebc28647ddaf748967758cb641') in 0.727774 seconds
+  Import took 0.732111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Base.png
+  artifactKey: Guid(9fee56bcabdb7c2489906b4ab83c66d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Base.png using Guid(9fee56bcabdb7c2489906b4ab83c66d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb11edbe380691376c90bb7434e9e356') in 0.145364 seconds
+  Import took 0.212864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Deco.png
+  artifactKey: Guid(42bbe554c69b23c4f8522aae693ce2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Deco.png using Guid(42bbe554c69b23c4f8522aae693ce2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96b6031840e50dd1716123c32b4b1272') in 0.990234 seconds
+  Import took 0.993684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Base.png
+  artifactKey: Guid(dce221f61c1e78b42822f90bbf7a7568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Base.png using Guid(dce221f61c1e78b42822f90bbf7a7568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bde11eb784d324035998494ec0dde0a4') in 0.253190 seconds
+  Import took 0.291026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Feet.png
+  artifactKey: Guid(a4414774885ed954699415a071d8aaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Feet.png using Guid(a4414774885ed954699415a071d8aaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da9b53874e45621dd17dc025fcf8a772') in 0.007078 seconds
+  Import took 0.010063 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Glow.png
+  artifactKey: Guid(655b1c380db30ec4cbf2c62ee8bbd2a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Glow.png using Guid(655b1c380db30ec4cbf2c62ee8bbd2a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e7907b2ab57d5ae691823a25dd2500a') in 0.007589 seconds
+  Import took 0.010845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Glow.png
+  artifactKey: Guid(598121ff1a49b9b4bb1db1c94e23aa2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Glow.png using Guid(598121ff1a49b9b4bb1db1c94e23aa2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14ec70ea3d685f97ce6e1c9cf21f9201') in 0.225858 seconds
+  Import took 0.228942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Leg_Top.png
+  artifactKey: Guid(683acbfe09371784f8e53908f487efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Leg_Top.png using Guid(683acbfe09371784f8e53908f487efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '785afafe89e2474d738b621070e56251') in 0.008287 seconds
+  Import took 0.011442 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Tail_Base.png
+  artifactKey: Guid(bf804edac66c5264f950d51a9a67f6f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Tail_Base.png using Guid(bf804edac66c5264f950d51a9a67f6f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0236ef0ce81fff2fd8c5ace5eecaa658') in 0.876656 seconds
+  Import took 0.880000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Deco.png
+  artifactKey: Guid(2d5496508155edf49852ec4b528c0048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Deco.png using Guid(2d5496508155edf49852ec4b528c0048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '600aaa44991bbe88dc7b09b64be9f81b') in 0.033375 seconds
+  Import took 0.036815 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Top_Deco.png
+  artifactKey: Guid(4b7a7188fcb3ace42b3c01b33e9dd8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Top_Deco.png using Guid(4b7a7188fcb3ace42b3c01b33e9dd8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0964e5968834dc86c0e53a6c18332012') in 0.008172 seconds
+  Import took 0.011482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Tail_Deco.png
+  artifactKey: Guid(314285bcf5227524aafa7a3907f25fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Tail_Deco.png using Guid(314285bcf5227524aafa7a3907f25fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82f993d7c025148596af14ecfb532fad') in 0.274970 seconds
+  Import took 0.395379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Deco.png
+  artifactKey: Guid(cfe71348fe67f6f48af121addd37d84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Deco.png using Guid(cfe71348fe67f6f48af121addd37d84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd6dfee3c28d422d922a3ecdfcba4f19') in 0.006675 seconds
+  Import took 0.010441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Feet.png
+  artifactKey: Guid(6a708b554133e1044aca973b45c71de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Feet.png using Guid(6a708b554133e1044aca973b45c71de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6405cc183d98d540ecf0fd2a174f6b5d') in 0.008305 seconds
+  Import took 0.011529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Base.png
+  artifactKey: Guid(826809b0eb7871c4280bf651550d2faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Base.png using Guid(826809b0eb7871c4280bf651550d2faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '784c0959116ebebcf5ae12cbc3806f18') in 0.007132 seconds
+  Import took 0.010198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.865695 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Base.png
+  artifactKey: Guid(496f0dd72576bd74a99fd896504d4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Base.png using Guid(496f0dd72576bd74a99fd896504d4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1f543c68d4e123230c57eb64049f2a6') in 0.014616 seconds
+  Import took 0.017960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026520 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Base.png
+  artifactKey: Guid(496f0dd72576bd74a99fd896504d4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Base.png using Guid(496f0dd72576bd74a99fd896504d4390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1f543c68d4e123230c57eb64049f2a6') in 0.014025 seconds
+  Import took 0.017354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Top_Base.png
+  artifactKey: Guid(a5b3d4b60af753f4eb7fa20ddfab94cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Top_Base.png using Guid(a5b3d4b60af753f4eb7fa20ddfab94cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2469a72b966643ca40cb639fdcf48977') in 0.010774 seconds
+  Import took 0.014069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Leg_Bottom.png
+  artifactKey: Guid(268e0ef8dc07b464bacec14f26359c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Leg_Bottom.png using Guid(268e0ef8dc07b464bacec14f26359c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '005b8d746cf3d7cb35f0cb8b865d63c0') in 0.011891 seconds
+  Import took 0.015098 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Glow.png
+  artifactKey: Guid(9d8333d7770f83e4f931ebe3695af791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Glow.png using Guid(9d8333d7770f83e4f931ebe3695af791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85bd96a8ac856ddf633a417a980e7cea') in 0.010253 seconds
+  Import took 0.013610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Deco.png
+  artifactKey: Guid(14ee8aa34233c7641ba3ee04998cedb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Deco.png using Guid(14ee8aa34233c7641ba3ee04998cedb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cefd535f65064bb326bbb390f6d046ec') in 0.010938 seconds
+  Import took 0.014246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Top_Deco.png
+  artifactKey: Guid(aa2a4112997baae4abca39bf35ba9d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Top_Deco.png using Guid(aa2a4112997baae4abca39bf35ba9d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f3ca36531c01f716f19557b14467f3') in 0.012257 seconds
+  Import took 0.015614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Deco.png
+  artifactKey: Guid(8bc992d5e0d369f4b85a13239a1c9741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Deco.png using Guid(8bc992d5e0d369f4b85a13239a1c9741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af2793857b5221100f217a51d34b835') in 0.012337 seconds
+  Import took 0.015730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Glow.png
+  artifactKey: Guid(5315f185c949d78489427567ef0a46b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Glow.png using Guid(5315f185c949d78489427567ef0a46b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71f3c1c051be049a132ef23457bd74bf') in 0.011893 seconds
+  Import took 0.015369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Leg_Top.png
+  artifactKey: Guid(c969d4ced8a4b97458476073fa1ea76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Leg_Top.png using Guid(c969d4ced8a4b97458476073fa1ea76b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebdd4f1a24a18a96780791b76b52a9a3') in 0.011754 seconds
+  Import took 0.015128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Top_Base.png
+  artifactKey: Guid(fb72675560ff70942a7c08104e78d4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Top_Base.png using Guid(fb72675560ff70942a7c08104e78d4b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '896dbdb390292384deda2003ae646775') in 0.012687 seconds
+  Import took 0.015987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Deco.png
+  artifactKey: Guid(cfe71348fe67f6f48af121addd37d84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Feet_Deco.png using Guid(cfe71348fe67f6f48af121addd37d84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6451038758998482bec21a36af1ef388') in 0.011631 seconds
+  Import took 0.014987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Leg_Bottom.png
+  artifactKey: Guid(727c5dd8898cf584ab45c9c771d2e205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Leg_Bottom.png using Guid(727c5dd8898cf584ab45c9c771d2e205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f75fbf9cee2c1c4a8b111c457d992e5') in 0.011213 seconds
+  Import took 0.014687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Base.png
+  artifactKey: Guid(213f566faf257a64898975780838a159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Base.png using Guid(213f566faf257a64898975780838a159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a93d4deeecf21f771aa2042264444837') in 0.012882 seconds
+  Import took 0.016241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Base.png
+  artifactKey: Guid(9fee56bcabdb7c2489906b4ab83c66d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Body_Base.png using Guid(9fee56bcabdb7c2489906b4ab83c66d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e712e4e2cc9f12e3f2d084a583ad0a4e') in 0.012662 seconds
+  Import took 0.016094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Deco.png
+  artifactKey: Guid(42bbe554c69b23c4f8522aae693ce2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Deco.png using Guid(42bbe554c69b23c4f8522aae693ce2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c69a497ac58ece1b81645236ea01e32') in 0.011610 seconds
+  Import took 0.015062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Base.png
+  artifactKey: Guid(dce221f61c1e78b42822f90bbf7a7568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Base.png using Guid(dce221f61c1e78b42822f90bbf7a7568) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '176f3d7818994d9a1b05b1440ab96779') in 0.012127 seconds
+  Import took 0.015472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Feet.png
+  artifactKey: Guid(a4414774885ed954699415a071d8aaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Feet.png using Guid(a4414774885ed954699415a071d8aaa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0234981a0cf6b120b59f65dbdc5853b9') in 0.013473 seconds
+  Import took 0.016607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Glow.png
+  artifactKey: Guid(655b1c380db30ec4cbf2c62ee8bbd2a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Feet_Glow.png using Guid(655b1c380db30ec4cbf2c62ee8bbd2a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '144c05f8b05a9b44b52a3666d24da88a') in 0.011732 seconds
+  Import took 0.015504 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Glow.png
+  artifactKey: Guid(598121ff1a49b9b4bb1db1c94e23aa2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Bottom_Glow.png using Guid(598121ff1a49b9b4bb1db1c94e23aa2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7de86277467d845fd28da2a014c0aeae') in 0.010688 seconds
+  Import took 0.014014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Leg_Top.png
+  artifactKey: Guid(683acbfe09371784f8e53908f487efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Front_Leg_Top.png using Guid(683acbfe09371784f8e53908f487efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67f4b27a8090218c7a5c497863c50c32') in 0.013574 seconds
+  Import took 0.016887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Tail_Base.png
+  artifactKey: Guid(bf804edac66c5264f950d51a9a67f6f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Tail_Base.png using Guid(bf804edac66c5264f950d51a9a67f6f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666267cb48ce663d9f5f5346ceeedf64') in 0.011629 seconds
+  Import took 0.014979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Deco.png
+  artifactKey: Guid(2d5496508155edf49852ec4b528c0048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Deco.png using Guid(2d5496508155edf49852ec4b528c0048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a224f6e4bbf1112f45e5ee1c87e61339') in 0.011023 seconds
+  Import took 0.014554 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Top_Deco.png
+  artifactKey: Guid(4b7a7188fcb3ace42b3c01b33e9dd8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Front_Leg_Top_Deco.png using Guid(4b7a7188fcb3ace42b3c01b33e9dd8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccb61b309ed489106c424d33177b84ec') in 0.011274 seconds
+  Import took 0.014635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Tail_Deco.png
+  artifactKey: Guid(314285bcf5227524aafa7a3907f25fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Tail_Deco.png using Guid(314285bcf5227524aafa7a3907f25fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '359c6d258de3d53cf8795cb1c4d0f711') in 0.012417 seconds
+  Import took 0.015652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Feet.png
+  artifactKey: Guid(6a708b554133e1044aca973b45c71de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Feet.png using Guid(6a708b554133e1044aca973b45c71de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee688c077562eaf1b118d6432d84bab') in 0.012131 seconds
+  Import took 0.033789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Base.png
+  artifactKey: Guid(826809b0eb7871c4280bf651550d2faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Back_Leg_Bottom_Base.png using Guid(826809b0eb7871c4280bf651550d2faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a525299e9965374a2fcd3d5fb5d15e8') in 0.011132 seconds
+  Import took 0.014369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011190 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Feet.png
+  artifactKey: Guid(6a708b554133e1044aca973b45c71de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Characters/Dog Enemy/Black_Back_Feet.png using Guid(6a708b554133e1044aca973b45c71de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fee688c077562eaf1b118d6432d84bab') in 0.027805 seconds
+  Import took 0.031445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 706.164178 seconds.
+  path: Assets/1.RocketJumperFiles/Prefab/Rocket.prefab
+  artifactKey: Guid(5e0a085b2d269fe418604c6feedaef28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Prefab/Rocket.prefab using Guid(5e0a085b2d269fe418604c6feedaef28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '652466b66572de880398d85bd5e03ca4') in 0.025965 seconds
+  Import took 0.030308 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 106.639635 seconds.
+  path: Assets/1.RocketJumperFiles/Prefab/Robot Enemy.prefab
+  artifactKey: Guid(ea55c83555ac3c3479c10c9a925efb3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Prefab/Robot Enemy.prefab using Guid(ea55c83555ac3c3479c10c9a925efb3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d866c2fdf802126fdae61591740216c') in 0.189924 seconds
+  Import took 0.205832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.960427 seconds.
+  path: Assets/1.RocketJumperFiles/Prefab/Robot Dog Enemy.prefab
+  artifactKey: Guid(153a1e0718993a24980679a789274c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Prefab/Robot Dog Enemy.prefab using Guid(153a1e0718993a24980679a789274c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c49d610ebf73b42d2d4ab8e5529ef93c') in 0.154990 seconds
+  Import took 0.169799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 148.578271 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/EnemyStats.cs
+  artifactKey: Guid(b5b61e70266e5ec48aa074546f22fdb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/EnemyStats.cs using Guid(b5b61e70266e5ec48aa074546f22fdb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3551b7f08dc6fa87568f0643bf6da83d') in 0.014359 seconds
+  Import took 0.018616 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001277 seconds.
+Registered in 0.001341 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.932 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2350 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.6 MB.
+System memory in use after: 116.5 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2946.
+Total: 4.329900 ms (FindLiveObjects: 0.628900 ms CreateObjectMapping: 0.223000 ms MarkObjects: 2.405900 ms  DeleteObjects: 1.070300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001326 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.893 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2350 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.7 MB.
+System memory in use after: 116.5 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2949.
+Total: 3.426200 ms (FindLiveObjects: 0.259900 ms CreateObjectMapping: 0.117200 ms MarkObjects: 1.923900 ms  DeleteObjects: 1.123700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001313 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.900 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2350 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.7 MB.
+System memory in use after: 116.5 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2952.
+Total: 3.524500 ms (FindLiveObjects: 0.279400 ms CreateObjectMapping: 0.116900 ms MarkObjects: 1.846700 ms  DeleteObjects: 1.280000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001393 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.906 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2350 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2955.
+Total: 3.941000 ms (FindLiveObjects: 0.309400 ms CreateObjectMapping: 0.134200 ms MarkObjects: 2.234000 ms  DeleteObjects: 1.262300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001382 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.889 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2350 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.7 MB.
+System memory in use after: 116.5 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2958.
+Total: 4.005000 ms (FindLiveObjects: 0.410900 ms CreateObjectMapping: 0.154600 ms MarkObjects: 2.045000 ms  DeleteObjects: 1.392600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001322 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.897 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2350 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2961.
+Total: 3.635200 ms (FindLiveObjects: 0.315600 ms CreateObjectMapping: 0.135300 ms MarkObjects: 1.913300 ms  DeleteObjects: 1.270100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001366 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.881 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2350 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2964.
+Total: 3.721700 ms (FindLiveObjects: 0.295100 ms CreateObjectMapping: 0.107900 ms MarkObjects: 1.926100 ms  DeleteObjects: 1.391300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001413 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.877 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2350 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2967.
+Total: 3.609900 ms (FindLiveObjects: 0.287400 ms CreateObjectMapping: 0.115900 ms MarkObjects: 1.913600 ms  DeleteObjects: 1.291900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 533.386816 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/BaseicAi.cs
+  artifactKey: Guid(6d2f28baca2e89842b954a6290a251c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/BaseicAi.cs using Guid(6d2f28baca2e89842b954a6290a251c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be3bb7a39f673147ea626b7d8dd61906') in 0.007589 seconds
+  Import took 0.011666 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001570 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.902 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2351 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2971.
+Total: 4.965900 ms (FindLiveObjects: 0.610600 ms CreateObjectMapping: 0.251600 ms MarkObjects: 2.624000 ms  DeleteObjects: 1.477600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.414942 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/DogAi.cs
+  artifactKey: Guid(6bdfca336fa8b7a408e5447c25312fb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/DogAi.cs using Guid(6bdfca336fa8b7a408e5447c25312fb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef57a1ef498d08f57a715455594d61a1') in 0.015400 seconds
+  Import took 0.019995 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001341 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.900 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2975.
+Total: 5.105800 ms (FindLiveObjects: 0.373300 ms CreateObjectMapping: 0.138600 ms MarkObjects: 2.870500 ms  DeleteObjects: 1.721000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001382 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.886 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2978.
+Total: 3.668600 ms (FindLiveObjects: 0.296100 ms CreateObjectMapping: 0.133200 ms MarkObjects: 1.970500 ms  DeleteObjects: 1.267700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.386702 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/BaseicAi.cs
+  artifactKey: Guid(6d2f28baca2e89842b954a6290a251c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/BaseicAi.cs using Guid(6d2f28baca2e89842b954a6290a251c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df5d1dc1230a9484b902d44bb8ab51e') in 0.005132 seconds
+  Import took 0.008537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.138078 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/BaseAi.cs
+  artifactKey: Guid(6d2f28baca2e89842b954a6290a251c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/BaseAi.cs using Guid(6d2f28baca2e89842b954a6290a251c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90d0b176623ab275e7eacd6a6dbc468b') in 0.007451 seconds
+  Import took 0.013101 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001359 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.928 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2981.
+Total: 3.593100 ms (FindLiveObjects: 0.289500 ms CreateObjectMapping: 0.132500 ms MarkObjects: 1.937600 ms  DeleteObjects: 1.232600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001407 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.884 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2984.
+Total: 3.229000 ms (FindLiveObjects: 0.294500 ms CreateObjectMapping: 0.120800 ms MarkObjects: 1.611700 ms  DeleteObjects: 1.200700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 250.237897 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/BaseAi.cs
+  artifactKey: Guid(6d2f28baca2e89842b954a6290a251c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/BaseAi.cs using Guid(6d2f28baca2e89842b954a6290a251c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98ce91518b2e48f86c751d1d13bc18b4') in 0.005168 seconds
+  Import took 0.008506 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001362 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2347 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.5 MB.
-System memory in use after: 115.2 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.884 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
 
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2923.
-Total: 3.372300 ms (FindLiveObjects: 0.275400 ms CreateObjectMapping: 0.099100 ms MarkObjects: 1.967200 ms  DeleteObjects: 1.029700 ms)
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2987.
+Total: 4.170700 ms (FindLiveObjects: 0.348400 ms CreateObjectMapping: 0.122500 ms MarkObjects: 2.133800 ms  DeleteObjects: 1.564700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001550 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.055 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2990.
+Total: 4.026500 ms (FindLiveObjects: 0.291800 ms CreateObjectMapping: 0.119000 ms MarkObjects: 2.062000 ms  DeleteObjects: 1.552200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001308 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.870 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2993.
+Total: 3.718600 ms (FindLiveObjects: 0.331500 ms CreateObjectMapping: 0.138500 ms MarkObjects: 1.996000 ms  DeleteObjects: 1.251300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001390 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.015 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2996.
+Total: 4.778400 ms (FindLiveObjects: 0.563700 ms CreateObjectMapping: 0.262300 ms MarkObjects: 2.411100 ms  DeleteObjects: 1.539500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001353 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.936 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2999.
+Total: 4.064700 ms (FindLiveObjects: 0.345900 ms CreateObjectMapping: 0.147000 ms MarkObjects: 2.059700 ms  DeleteObjects: 1.510800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001432 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.001 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3002.
+Total: 3.728000 ms (FindLiveObjects: 0.471700 ms CreateObjectMapping: 0.132000 ms MarkObjects: 1.828300 ms  DeleteObjects: 1.294700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001323 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.891 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3005.
+Total: 3.730300 ms (FindLiveObjects: 0.328400 ms CreateObjectMapping: 0.299500 ms MarkObjects: 1.852900 ms  DeleteObjects: 1.247900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001385 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.888 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3008.
+Total: 3.805500 ms (FindLiveObjects: 0.355700 ms CreateObjectMapping: 0.140000 ms MarkObjects: 2.060700 ms  DeleteObjects: 1.247700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 648.431126 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/PlayerAirControl.cs
+  artifactKey: Guid(a366c79377b01094d9c0bcd3d54686b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/PlayerAirControl.cs using Guid(a366c79377b01094d9c0bcd3d54686b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f37f06897ff689a25fa11c75c5142094') in 0.005566 seconds
+  Import took 0.009116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.934627 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/EnemyStats.cs
+  artifactKey: Guid(b5b61e70266e5ec48aa074546f22fdb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/EnemyStats.cs using Guid(b5b61e70266e5ec48aa074546f22fdb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3064bc59b5204dc678fa7234ffddb24') in 0.002747 seconds
+  Import took 0.006217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.895212 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/EnemyInfo.cs
+  artifactKey: Guid(b5b61e70266e5ec48aa074546f22fdb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/EnemyInfo.cs using Guid(b5b61e70266e5ec48aa074546f22fdb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4852c252c651b66a19462ee1fd6e5da') in 0.002655 seconds
+  Import took 0.006763 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001351 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.889 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3011.
+Total: 3.858500 ms (FindLiveObjects: 0.440700 ms CreateObjectMapping: 0.182200 ms MarkObjects: 2.041200 ms  DeleteObjects: 1.192800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001391 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.999 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3014.
+Total: 4.726900 ms (FindLiveObjects: 0.635000 ms CreateObjectMapping: 0.259300 ms MarkObjects: 2.292000 ms  DeleteObjects: 1.539100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001391 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.933 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3017.
+Total: 4.632700 ms (FindLiveObjects: 0.308000 ms CreateObjectMapping: 0.131600 ms MarkObjects: 2.073400 ms  DeleteObjects: 2.118300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001837 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.873 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3020.
+Total: 3.506600 ms (FindLiveObjects: 0.289500 ms CreateObjectMapping: 0.125200 ms MarkObjects: 1.847200 ms  DeleteObjects: 1.243700 ms)
 
 ========================================================================
 Received Prepare
@@ -108,129 +1637,511 @@ Registered in 0.001347 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.896 seconds
+- Completed reload, in  0.883 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2347 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.5 MB.
-System memory in use after: 115.3 MB.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
 
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2926.
-Total: 3.536300 ms (FindLiveObjects: 0.315400 ms CreateObjectMapping: 0.114000 ms MarkObjects: 1.955800 ms  DeleteObjects: 1.149800 ms)
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3023.
+Total: 3.694400 ms (FindLiveObjects: 0.304100 ms CreateObjectMapping: 0.111600 ms MarkObjects: 1.969100 ms  DeleteObjects: 1.308400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001298 seconds.
+Registered in 0.001423 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.885 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3026.
+Total: 3.290200 ms (FindLiveObjects: 0.289000 ms CreateObjectMapping: 0.122900 ms MarkObjects: 1.665000 ms  DeleteObjects: 1.212200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001363 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.889 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3029.
+Total: 3.670400 ms (FindLiveObjects: 0.290500 ms CreateObjectMapping: 0.121600 ms MarkObjects: 1.850200 ms  DeleteObjects: 1.406400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001317 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.892 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3032.
+Total: 3.856000 ms (FindLiveObjects: 0.276300 ms CreateObjectMapping: 0.124800 ms MarkObjects: 2.185800 ms  DeleteObjects: 1.267400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001339 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.867 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 116.6 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3035.
+Total: 3.961700 ms (FindLiveObjects: 0.273200 ms CreateObjectMapping: 0.127700 ms MarkObjects: 2.073500 ms  DeleteObjects: 1.485900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001456 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.868 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3038.
+Total: 4.269200 ms (FindLiveObjects: 0.327700 ms CreateObjectMapping: 0.145500 ms MarkObjects: 2.429000 ms  DeleteObjects: 1.365200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001320 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.903 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3041.
+Total: 3.910600 ms (FindLiveObjects: 0.290000 ms CreateObjectMapping: 0.127400 ms MarkObjects: 2.019700 ms  DeleteObjects: 1.472100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001382 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.884 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3044.
+Total: 3.309500 ms (FindLiveObjects: 0.319700 ms CreateObjectMapping: 0.134900 ms MarkObjects: 1.620600 ms  DeleteObjects: 1.232300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001309 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.908 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3047.
+Total: 3.597300 ms (FindLiveObjects: 0.327600 ms CreateObjectMapping: 0.147800 ms MarkObjects: 1.836000 ms  DeleteObjects: 1.284800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001334 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.883 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2352 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3050.
+Total: 3.580400 ms (FindLiveObjects: 0.295700 ms CreateObjectMapping: 0.119800 ms MarkObjects: 1.914700 ms  DeleteObjects: 1.249000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2571.093494 seconds.
+  path: Assets/1.RocketJumperFiles/Scripts/RobotAi.cs
+  artifactKey: Guid(389158e0410d6d6458f374b60d1e3ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Scripts/RobotAi.cs using Guid(389158e0410d6d6458f374b60d1e3ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4cc16c2655aaa0ebece6a25ba251458') in 0.007858 seconds
+  Import took 0.012657 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001314 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.930 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3054.
+Total: 4.321100 ms (FindLiveObjects: 0.467900 ms CreateObjectMapping: 0.191400 ms MarkObjects: 2.329700 ms  DeleteObjects: 1.330200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001360 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.919 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.1 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3057.
+Total: 3.944900 ms (FindLiveObjects: 0.320300 ms CreateObjectMapping: 0.147200 ms MarkObjects: 2.202000 ms  DeleteObjects: 1.273300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001389 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.887 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.1 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3060.
+Total: 3.668900 ms (FindLiveObjects: 0.297900 ms CreateObjectMapping: 0.140600 ms MarkObjects: 1.907500 ms  DeleteObjects: 1.321700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001321 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.892 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3063.
+Total: 4.543300 ms (FindLiveObjects: 0.516800 ms CreateObjectMapping: 0.196900 ms MarkObjects: 2.525600 ms  DeleteObjects: 1.302000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001369 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.894 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 116.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3066.
+Total: 3.656000 ms (FindLiveObjects: 0.282300 ms CreateObjectMapping: 0.116600 ms MarkObjects: 1.874500 ms  DeleteObjects: 1.381300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001383 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.890 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3069.
+Total: 3.475700 ms (FindLiveObjects: 0.352200 ms CreateObjectMapping: 0.145700 ms MarkObjects: 1.763400 ms  DeleteObjects: 1.213200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001686 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.977 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.1 MB.
+System memory in use after: 116.9 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3072.
+Total: 3.547200 ms (FindLiveObjects: 0.326200 ms CreateObjectMapping: 0.135500 ms MarkObjects: 1.861000 ms  DeleteObjects: 1.222300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001317 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.891 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 116.9 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3075.
+Total: 3.641500 ms (FindLiveObjects: 0.323700 ms CreateObjectMapping: 0.125500 ms MarkObjects: 1.948800 ms  DeleteObjects: 1.242200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001638 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.902 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.1 MB.
+System memory in use after: 116.9 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3078.
+Total: 3.939300 ms (FindLiveObjects: 0.304700 ms CreateObjectMapping: 0.117800 ms MarkObjects: 2.216200 ms  DeleteObjects: 1.299400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001329 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.909 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 116.8 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3081.
+Total: 4.043200 ms (FindLiveObjects: 0.321600 ms CreateObjectMapping: 0.117900 ms MarkObjects: 2.237400 ms  DeleteObjects: 1.364500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001429 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.872 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.1 MB.
+System memory in use after: 116.9 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3084.
+Total: 3.701500 ms (FindLiveObjects: 0.319100 ms CreateObjectMapping: 0.118100 ms MarkObjects: 2.009700 ms  DeleteObjects: 1.253300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001372 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.893 seconds
+- Completed reload, in  0.874 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2347 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.5 MB.
-System memory in use after: 115.3 MB.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.1 MB.
+System memory in use after: 116.9 MB.
 
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2929.
-Total: 3.295100 ms (FindLiveObjects: 0.260000 ms CreateObjectMapping: 0.114700 ms MarkObjects: 1.730200 ms  DeleteObjects: 1.189000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001401 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.881 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2347 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.5 MB.
-System memory in use after: 115.3 MB.
-
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2932.
-Total: 3.826300 ms (FindLiveObjects: 0.299100 ms CreateObjectMapping: 0.138900 ms MarkObjects: 1.798000 ms  DeleteObjects: 1.588900 ms)
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3087.
+Total: 3.555100 ms (FindLiveObjects: 0.283100 ms CreateObjectMapping: 0.122600 ms MarkObjects: 1.796700 ms  DeleteObjects: 1.351300 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001335 seconds.
+Registered in 0.001391 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.879 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2347 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.4 MB.
-System memory in use after: 115.2 MB.
-
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2935.
-Total: 3.446600 ms (FindLiveObjects: 0.261200 ms CreateObjectMapping: 0.120500 ms MarkObjects: 1.886900 ms  DeleteObjects: 1.176700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001411 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.859 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2347 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.5 MB.
-System memory in use after: 115.3 MB.
-
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2938.
-Total: 3.963400 ms (FindLiveObjects: 0.328000 ms CreateObjectMapping: 0.125400 ms MarkObjects: 2.116500 ms  DeleteObjects: 1.391700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001425 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.859 seconds
+- Completed reload, in  0.873 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2347 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.6 MB.
-System memory in use after: 115.4 MB.
+Unloading 2353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.1 MB.
+System memory in use after: 116.9 MB.
 
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2941.
-Total: 3.481000 ms (FindLiveObjects: 0.286700 ms CreateObjectMapping: 0.102700 ms MarkObjects: 1.874000 ms  DeleteObjects: 1.216400 ms)
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3090.
+Total: 3.921200 ms (FindLiveObjects: 0.317700 ms CreateObjectMapping: 0.110600 ms MarkObjects: 2.244300 ms  DeleteObjects: 1.247600 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

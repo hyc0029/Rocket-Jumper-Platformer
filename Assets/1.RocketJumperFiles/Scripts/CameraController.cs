@@ -34,6 +34,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         mainCam = GetComponent<Camera>();
         //playerRigidbody2D = FindObjectOfType<CharacterController>().GetComponent<Rigidbody2D>();
         player = FindObjectOfType<CharacterController>().GetComponent<CharacterController>();
@@ -43,8 +44,11 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CameraSizeController();
-        CameraPositionController();
+        if (Time.timeScale != 0)
+        {
+            CameraSizeController();
+            CameraPositionController();
+        }
     }
 
     void CameraSizeController()

@@ -63,8 +63,11 @@ public class RocketLauncherControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rocketAiming();
-        firingRocket();
+        if (Time.timeScale != 0)
+        {
+            rocketAiming();
+            firingRocket();
+        }
     }
 
     private void rocketAiming()

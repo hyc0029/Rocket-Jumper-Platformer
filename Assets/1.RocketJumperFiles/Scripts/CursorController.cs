@@ -17,18 +17,24 @@ public class CursorController : MonoBehaviour
     [SerializeField] private Image cursorImg; 
     [SerializeField] private int currentCursor;
     [SerializeField] private List<CursorInformation> cursorInformations;
+    [SerializeField] private GameObject pause;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
-        cursorImg.sprite = cursorInformations[currentCursor].cursor;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (pause.activeSelf)
+            currentCursor = 0;
+        else
+            currentCursor = 1;
+        cursorImg.sprite = cursorInformations[currentCursor].cursor;
+
         cursorImg.GetComponent<RectTransform>().transform.position = Input.mousePosition + (Vector3)cursorInformations[currentCursor].offset;
     }
 

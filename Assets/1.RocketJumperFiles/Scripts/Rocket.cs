@@ -64,7 +64,7 @@ public class Rocket : MonoBehaviour
         {
             foreach (Collider2D col in CanBeHit)
             {
-                if (col.GetComponent<Rigidbody2D>() != null)
+                if (col.GetComponent<Rigidbody2D>() && !col.GetComponent<EnemyInfo>())
                 {
                     Rigidbody2D thisRB2D = col.GetComponent<Rigidbody2D>();
                     Vector2 explosionDir = thisRB2D.position - explosionPoint;
@@ -82,6 +82,11 @@ public class Rocket : MonoBehaviour
                     Vector2 explosionForce = rlc.forceToApply * explosionDir;
                     thisRB2D.drag = 0;
                     thisRB2D.AddForce(explosionForce, ForceMode2D.Impulse);
+                }
+                else if (col.GetComponent<EnemyInfo>())
+                {
+                    Debug.Log("HitEnemy");
+                    col.GetComponent<EnemyInfo>().health -= 1;
                 }
             }
             exploded = true;
