@@ -107,7 +107,7 @@ public class CameraController : MonoBehaviour
         }
         if (MouseDeadzoneForCamera(minYMouseDeadzone, maxYMouseDeadzone, Vector2.up))
             newCameraPosition.y += mouseLocalPosition.y * distanceFromMouseModifier;
-
+         
         newCameraPosition.z = -1;
 
         return newCameraPosition;

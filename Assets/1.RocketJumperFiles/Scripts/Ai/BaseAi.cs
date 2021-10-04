@@ -28,4 +28,9 @@ public class BaseAi : MonoBehaviour
         return Physics2D.OverlapCircle(transform.position, distance, player);
     }
 
+    public bool isAlive(int currentHealth)
+    {
+        return currentHealth > 0;
+    }
+
 }

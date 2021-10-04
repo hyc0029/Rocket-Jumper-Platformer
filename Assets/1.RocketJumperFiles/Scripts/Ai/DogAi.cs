@@ -15,10 +15,17 @@ public class DogAi : BaseAi
     // Update is called once per frame
     void Update()
     {
-        if (!detectPlayer(transform.GetChild(0), myInfo.detectionRange, myInfo.playerMask))
-            patrolling();
+        if (isAlive(myInfo.health))
+        {
+            if (!detectPlayer(transform.GetChild(0), myInfo.detectionRange, myInfo.playerMask))
+                patrolling();
+            else
+                myInfo.myRB2D.velocity = new Vector3(0, myInfo.myRB2D.velocity.y, 0);
+        }
         else
-            myInfo.myRB2D.velocity = new Vector3(0, myInfo.myRB2D.velocity.y, 0);
+        {
+            myInfo.myRB2D.velocity = Vector3.zero;
+        }
     }
 
     void patrolling()

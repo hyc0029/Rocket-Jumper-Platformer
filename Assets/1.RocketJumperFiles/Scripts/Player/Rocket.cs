@@ -85,8 +85,11 @@ public class Rocket : MonoBehaviour
                 }
                 else if (col.GetComponent<EnemyInfo>())
                 {
-                    Debug.Log("HitEnemy");
                     col.GetComponent<EnemyInfo>().health -= 1;
+                }
+                else if (col.GetComponent<DestructableEnvironment>())
+                {
+                    col.GetComponent<DestructableEnvironment>().destroyEnvrionment();
                 }
             }
             exploded = true;
