@@ -1884,6 +1884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRB2D: {fileID: 8735891746674996704}
+  myAnimator: {fileID: 8735891746674996705}
+  myCol: {fileID: 3173808675140225807}
   health: 1
   movementSpeed: 15
   forwardDetectionOrigin: {x: 0, y: 1}

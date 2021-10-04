@@ -25,6 +25,7 @@ public class DogAi : BaseAi
         else
         {
             myInfo.myRB2D.velocity = Vector3.zero;
+            Dead(myInfo.myRB2D, myInfo.myAnimator, myInfo.myCol, "Dead");
         }
     }
 

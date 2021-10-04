@@ -33,4 +33,16 @@ public class BaseAi : MonoBehaviour
         return currentHealth > 0;
     }
 
+    public void Dead(Rigidbody2D rb2d, Animator animator, Collider2D col ,string boolName)
+    {
+        if (!animator.GetBool(boolName))
+        {
+            animator.SetBool(boolName, true);
+            col.enabled = false;
+            rb2d.gravityScale = 0;
+            Debug.Log("Dead");
+        }
+    }
+
+
 }

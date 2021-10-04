@@ -5,6 +5,9 @@ using UnityEngine;
 public class EnemyInfo : MonoBehaviour
 {
     public Rigidbody2D myRB2D;
+    public Animator myAnimator;
+    public Collider2D myCol;
+
     [Header("Basic Stats")]
     public int health;
     public int movementSpeed;
