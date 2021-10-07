@@ -66,8 +66,9 @@ public class Rocket : MonoBehaviour
             {
                 if (col.GetComponent<Rigidbody2D>() && !col.GetComponent<EnemyInfo>())
                 {
+                    CharacterController cc = col.GetComponent<CharacterController>();
                     Rigidbody2D thisRB2D = col.GetComponent<Rigidbody2D>();
-                    Vector2 explosionDir = thisRB2D.position - explosionPoint;
+                    Vector2 explosionDir = (thisRB2D.position + rlc.playerCenterOffset) - explosionPoint;
                     float explosionDistance = explosionDir.magnitude;
 
                     if (rlc.upwardsModifier == 0)
@@ -77,6 +78,9 @@ public class Rocket : MonoBehaviour
                         explosionDir.y += rlc.upwardsModifier;
                         explosionDir.Normalize();
                     }
+
+                    if (cc.resetVerticalVelocityCheck() && !cc.groundCheck())
+                        thisRB2D.velocity = new Vector3(thisRB2D.velocity.x, 0, 0);
 
                     //Vector2 explosionForce = Mathf.Lerp(0, rlc.forceToApply, (rlc.explosionRadius - explosionDistance)) * explosionDir;
                     Vector2 explosionForce = rlc.forceToApply * explosionDir;

@@ -6,21 +6,51 @@ public class BaseAi : MonoBehaviour
 {
     protected ContactFilter2D cf;
 
+    public bool groundCheck(Transform transform, Vector2 position, Vector2 size, LayerMask groundMask)
+    {
+        if (Physics2D.OverlapBox(transform.TransformPoint(position), size, 0, groundMask))
+            return true;
+        else
+            return false;
+    }
+
     public bool checkForward(Transform transform, Vector2 origin, float distance, LayerMask layers)
     {
         List<RaycastHit2D> hits = new List<RaycastHit2D>();
         cf.useLayerMask = true;
         cf.SetLayerMask(layers);
         Physics2D.Raycast(transform.TransformPoint(origin), transform.right, cf, hits, distance);
+
         if (hits.Count > 1)
             return true;
         else
             return false;
     }
 
+    public bool checkForwardDown(Transform transform, Vector2 origin, float distance, LayerMask layers)
+    {
+        List<RaycastHit2D> hits = new List<RaycastHit2D>();
+        cf.useLayerMask = true;
+        cf.SetLayerMask(layers);
+        Physics2D.Raycast(transform.TransformPoint(origin), -transform.up, cf, hits, distance);
+
+        if (hits.Count > 0)
+            return false;
+        else
+            return true;
+    }
+
     public void basicMovement(Rigidbody2D rb2d, Transform transform, float speed)
     {
         rb2d.velocity = new Vector3(transform.right.x * speed, rb2d.velocity.y, 0);
+    }
+
+    public void moveTowardPlayer(Rigidbody2D rb2d, Transform target, float speed)
+    {
+        float xDir = (rb2d.position.x < target.position.x ? 1 : 0) - (rb2d.position.x > target.position.x ? 1 : 0);
+        rb2d.velocity = new Vector3(xDir * speed, rb2d.velocity.y, 0);
+        if (rb2d.transform.GetChild(0).InverseTransformPoint(target.position).x < 0)
+            rb2d.transform.GetChild(0).Rotate(new Vector3(0, 180, 0));
     }
 
     public bool detectPlayer(Transform transform, float distance, LayerMask player)
@@ -39,8 +69,6 @@ public class BaseAi : MonoBehaviour
         {
             animator.SetBool(boolName, true);
             col.enabled = false;
-            rb2d.gravityScale = 0;
-            Debug.Log("Dead");
         }
     }
 

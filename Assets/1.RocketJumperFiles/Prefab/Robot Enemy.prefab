@@ -1834,8 +1834,15 @@ MonoBehaviour:
   myCol: {fileID: 6685378774640427923}
   health: 3
   movementSpeed: 10
+  groundCheckPosition: {x: 0, y: 0}
+  groundCheckSize: {x: 0, y: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
   forwardDetectionOrigin: {x: 0, y: 1}
   changeMovingDirectionDtectionRange: 2
+  forwardGroundDetectionOrigin: {x: 2, y: 1}
+  forwardGroundDetectionRange: 1.1
   forwardDetectionLayermasks:
     serializedVersion: 2
     m_Bits: 1600
@@ -1843,6 +1850,8 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 128
+  haveDetectedPlayer: 0
+  attackRange: 100
 --- !u!114 &2194355090930757500
 MonoBehaviour:
   m_ObjectHideFlags: 0

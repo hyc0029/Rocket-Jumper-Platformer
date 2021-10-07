@@ -45,6 +45,7 @@ public class RocketLauncherControl : MonoBehaviour
     public float[] forces;
     public float explosionRadius;
     public float upwardsModifier;
+    public Vector2 playerCenterOffset;
     public LayerMask ExplosionCanHit;
     [System.NonSerialized]public float forceToApply;
 
@@ -147,5 +148,8 @@ public class RocketLauncherControl : MonoBehaviour
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(rocket.TransformPoint((Vector3)rocketSpawnOffset), sizeOfCast);
+
+        Gizmos.DrawWireSphere(transform.position + (Vector3)playerCenterOffset, 0.5f);
+
     }
 }

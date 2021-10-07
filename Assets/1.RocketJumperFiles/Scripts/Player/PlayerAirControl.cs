@@ -6,16 +6,19 @@ public class PlayerAirControl : MonoBehaviour
 {
 
     Rigidbody2D playerRb;
+    CharacterController cc;
     [SerializeField] private float airControlForce;
+    [SerializeField] private float groundedMoveSpeed;
     [SerializeField] private ParticleSystem forwardThrustParticle;
     [SerializeField] private ParticleSystem backwardThrustParticle;
     [SerializeField] private AudioSource thrustSound;
+
     float leftRight;
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
-
+        cc = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -44,11 +47,16 @@ public class PlayerAirControl : MonoBehaviour
             backwardThrustParticle.Stop();
             thrustSound.Stop();
         }
+        if (cc.groundCheck() && leftRight != 0 && playerRb.velocity.magnitude < groundedMoveSpeed)
+        {
+            playerRb.AddForce(transform.right * leftRight * 1000);
+        }
     }
 
     private void FixedUpdate()
     {
-        playerRb.AddForce(transform.right * leftRight * (airControlForce));
+        if (!cc.groundCheck())
+            playerRb.AddForce(transform.right * leftRight * (airControlForce));
     }
 
 }

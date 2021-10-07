@@ -17,10 +17,20 @@ public class RobotAi : BaseAi
     {
         if (isAlive(myInfo.health))
         {
-            if (!detectPlayer(transform.GetChild(0), myInfo.detectionRange, myInfo.playerMask))
+            if (!detectPlayer(transform.GetChild(0), myInfo.detectionRange, myInfo.playerMask) && !myInfo.haveDetectedPlayer)
                 patrolling();
             else
-                myInfo.myRB2D.velocity = new Vector3(0, myInfo.myRB2D.velocity.y, 0);
+            {
+                myInfo.haveDetectedPlayer = true;
+                if (detectPlayer(transform.GetChild(0), myInfo.attackRange, myInfo.playerMask))
+                {
+
+                }
+                else
+                {
+                    moveTowardPlayer(myInfo.myRB2D, FindObjectOfType<CharacterController>().transform, myInfo.movementSpeed);
+                }
+            }
         }
         else
         {
@@ -31,9 +41,8 @@ public class RobotAi : BaseAi
 
     void patrolling()
     {
-        if (checkForward(transform.GetChild(0).transform, myInfo.forwardDetectionOrigin, myInfo.changeMovingDirectionDtectionRange, myInfo.forwardDetectionLayermasks))
+        if (checkForward(transform.GetChild(0).transform, myInfo.forwardDetectionOrigin, myInfo.changeMovingDirectionDtectionRange, myInfo.forwardDetectionLayermasks) || checkForwardDown(transform.GetChild(0).transform, myInfo.forwardGroundDetectionOrigin, myInfo.forwardGroundDetectionRange, myInfo.forwardDetectionLayermasks))
             transform.GetChild(0).transform.Rotate(new Vector3(0, 180, 0));
-
         basicMovement(myInfo.myRB2D, transform.GetChild(0).transform, myInfo.movementSpeed);
     }
 }

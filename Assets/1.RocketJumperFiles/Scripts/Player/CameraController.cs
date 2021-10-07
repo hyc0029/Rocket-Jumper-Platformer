@@ -95,7 +95,7 @@ public class CameraController : MonoBehaviour
 
         Vector3 mouseLocalPosition = playerRigidbody2D.transform.InverseTransformPoint(mainCam.ScreenToWorldPoint(Input.mousePosition));
 
-        if (playerVelocity.magnitude > 5)
+        if (playerVelocity.magnitude > 10)
         {
             newCameraPosition = (Vector3)playerRigidbody2D.position + ((Vector3.right * playerVelocity.normalized.x) * camLead);
         }
