@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BaseAi : MonoBehaviour
 {
-    protected ContactFilter2D cf;
+    private ContactFilter2D cf;
+    private ContactFilter2D raycastFilter;
 
     public bool groundCheck(Transform transform, Vector2 position, Vector2 size, LayerMask groundMask)
     {
@@ -53,9 +54,28 @@ public class BaseAi : MonoBehaviour
             rb2d.transform.GetChild(0).Rotate(new Vector3(0, 180, 0));
     }
 
-    public bool detectPlayer(Transform transform, float distance, LayerMask player)
+    public bool detectPlayer(Transform transform, Transform eyePos, float distance, LayerMask player)
     {
-        return Physics2D.OverlapCircle(transform.position, distance, player);
+        if (Physics2D.OverlapCircle(transform.position, distance, player))
+        {
+            RaycastHit2D[] rayHits2D;
+
+            Vector2 directionToPlayer = FindObjectOfType<CharacterController>().transform.position - eyePos.position;
+            rayHits2D = Physics2D.RaycastAll(eyePos.position, directionToPlayer.normalized, directionToPlayer.magnitude);
+            if (rayHits2D.Length > 0)
+            {
+                if (rayHits2D[0].transform.GetComponent<CharacterController>())
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
+        else
+            return false;
+
+        //return Physics2D.OverlapCircle(transform.position, distance, player);
     }
 
     public bool isAlive(int currentHealth)

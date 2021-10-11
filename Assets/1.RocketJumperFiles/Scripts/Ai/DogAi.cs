@@ -26,14 +26,14 @@ public class DogAi : BaseAi
     {
         if (isAlive(myInfo.health))
         {
-            if (!detectPlayer(transform.GetChild(0), myInfo.detectionRange, myInfo.playerMask) && !myInfo.haveDetectedPlayer && !calledByDog)
+            if (!detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.detectionRange, myInfo.playerMask) && !myInfo.haveDetectedPlayer && !calledByDog)
                 patrolling();
             else
             {
                 ActivateAllNearbyDogs();
                 myInfo.haveDetectedPlayer = true;
                 myInfo.myAnimator.SetBool("Attack", attacking);
-                if (detectPlayer(transform.GetChild(0), myInfo.attackRange, myInfo.playerMask))
+                if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask))
                 {
                     if (!attacking)
                         jumpToPlayer();
@@ -71,10 +71,6 @@ public class DogAi : BaseAi
 
     void jumpToPlayer()
     {
-
-        if (transform.GetChild(0).InverseTransformPoint(FindObjectOfType<CharacterController>().transform.position).x < 0)
-            transform.GetChild(0).Rotate(new Vector3(0, 180, 0));
-
         myInfo.myRB2D.velocity = Vector2.zero;
         
         Vector2 jumpDir = FindObjectOfType<CharacterController>().transform.position - transform.position;

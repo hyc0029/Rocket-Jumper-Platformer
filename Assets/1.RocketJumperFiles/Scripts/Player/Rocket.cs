@@ -68,7 +68,16 @@ public class Rocket : MonoBehaviour
                 {
                     CharacterController cc = col.GetComponent<CharacterController>();
                     Rigidbody2D thisRB2D = col.GetComponent<Rigidbody2D>();
-                    Vector2 explosionDir = (thisRB2D.position + rlc.playerCenterOffset) - explosionPoint;
+                    Vector2 playerCenterOffset = Vector2.zero;
+                    if (cc.walledCheck())
+                    {
+                        playerCenterOffset = Vector2.up * 6;
+                    }
+                    else
+                    {
+                        playerCenterOffset = rlc.playerCenterOffset;
+                    }
+                    Vector2 explosionDir = (thisRB2D.position + playerCenterOffset) - explosionPoint;
                     float explosionDistance = explosionDir.magnitude;
 
                     if (rlc.upwardsModifier == 0)

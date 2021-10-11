@@ -23,6 +23,11 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private Vector2 enemyCheckBoxSize;
     [SerializeField] private LayerMask enemyMask;
 
+    [Header("Walled Check")]
+    [SerializeField] private Vector2 walledCheckBoxPos;
+    [SerializeField] private Vector2 walledCheckBoxSize;
+    [SerializeField] private LayerMask wallCheckMasks;
+
     [Header("Reset Vertical Velocity Check")]
     [SerializeField] private Vector2 resetVerticalVelocityCheckPos;
     [SerializeField] private Vector2 resetVerticalVelocityCheckSize;
@@ -95,6 +100,14 @@ public class CharacterController : MonoBehaviour
             return false;
     }
 
+    public bool walledCheck()
+    {
+        if (Physics2D.OverlapBox(transform.TransformPoint(walledCheckBoxPos), walledCheckBoxSize, 0, wallCheckMasks) || Physics2D.OverlapBox(transform.TransformPoint(new Vector2(-walledCheckBoxPos.x, walledCheckBoxPos.y)), walledCheckBoxSize, 0, wallCheckMasks))
+            return true;
+        else
+            return false;
+    }
+
     public bool resetVerticalVelocityCheck()
     {
         if (Physics2D.OverlapBox(transform.TransformPoint(resetVerticalVelocityCheckPos), resetVerticalVelocityCheckSize, 0, groundMask))
@@ -115,6 +128,9 @@ public class CharacterController : MonoBehaviour
         Gizmos.DrawWireCube(transform.TransformPoint(groundCheckBoxPos), groundCheckBoxSize);
 
         Gizmos.DrawWireCube(transform.TransformPoint(resetVerticalVelocityCheckPos), resetVerticalVelocityCheckSize);
+
+        Gizmos.DrawWireCube(transform.TransformPoint(walledCheckBoxPos), walledCheckBoxSize);
+        Gizmos.DrawWireCube(transform.TransformPoint(new Vector2(-walledCheckBoxPos.x, walledCheckBoxPos.y)), walledCheckBoxSize);
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.TransformPoint(enemyCheckBoxPos), enemyCheckBoxSize);

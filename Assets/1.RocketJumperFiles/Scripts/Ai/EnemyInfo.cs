@@ -25,6 +25,7 @@ public class EnemyInfo : MonoBehaviour
     public LayerMask forwardDetectionLayermasks;
 
     [Header("Player Detection")]
+    public Transform myEyeTrans;
     public float detectionRange;
     public LayerMask playerMask;
     public bool haveDetectedPlayer;
