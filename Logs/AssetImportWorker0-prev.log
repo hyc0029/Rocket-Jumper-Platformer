@@ -1,0 +1,362 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1237; Version 2009; 64bit' Language: 'en' Physical Memory: 16308 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Github/Rocket Jumper Platformer
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63045
+Successfully changed project path to: D:/Github/Rocket Jumper Platformer
+D:/Github/Rocket Jumper Platformer
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 46.98 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.5f1 (8095aa901b9b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Github/Rocket Jumper Platformer/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
+    Vendor:   
+    VRAM:     8079 MB
+    Driver:   30.0.14.7196
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56848
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006500 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 39.87 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.119 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001422 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 41.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.946 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.19 seconds
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2449 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.7 MB.
+System memory in use after: 116.5 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2865.
+Total: 2.814900 ms (FindLiveObjects: 0.246000 ms CreateObjectMapping: 0.114900 ms MarkObjects: 1.511600 ms  DeleteObjects: 0.941100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 8.jpg
+  artifactKey: Guid(c6d990c3ec302ad44985eb381c20ec47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 8.jpg using Guid(c6d990c3ec302ad44985eb381c20ec47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8a9ddb05ef41dd6590667bceb8308c0') in 0.177913 seconds
+  Import took 0.181534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 5.jpg
+  artifactKey: Guid(1465d2f8dc36a5945800906b9f8869c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 5.jpg using Guid(1465d2f8dc36a5945800906b9f8869c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba62e074e24a9d126fbf5d509d488be') in 0.010620 seconds
+  Import took 0.013553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 3.jpg
+  artifactKey: Guid(8119e9c6183bbd54a83d20abee38b098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 3.jpg using Guid(8119e9c6183bbd54a83d20abee38b098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '408266a4b8866c4233fcfaf0f1e43571') in 0.014088 seconds
+  Import took 0.064810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout
+  artifactKey: Guid(ee19e19e546c91640a1d82ce927dd61b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout using Guid(ee19e19e546c91640a1d82ce927dd61b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '686a49071f230ae1832588b45db99fa5') in 0.002674 seconds
+  Import took 0.006105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Start Area.jpg
+  artifactKey: Guid(6ffd5307c8c20984abe6345a74b2976d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Start Area.jpg using Guid(6ffd5307c8c20984abe6345a74b2976d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '146a7496bf384b100bdef00e3b51dbec') in 0.007289 seconds
+  Import took 0.010552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 1.jpg
+  artifactKey: Guid(ab2985530d703b14da1a2460f1a3d03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 1.jpg using Guid(ab2985530d703b14da1a2460f1a3d03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c6f7faac4277e36fc5179a800b952b9') in 0.008912 seconds
+  Import took 0.036730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 7.jpg
+  artifactKey: Guid(ce83f898c93b68543bffdfcdaad3d869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 7.jpg using Guid(ce83f898c93b68543bffdfcdaad3d869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '619a97e98939cb3171bf575c9efd99e6') in 0.008394 seconds
+  Import took 0.011615 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 2.jpg
+  artifactKey: Guid(2a28b1330e70c7b4397272af1eff66bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 2.jpg using Guid(2a28b1330e70c7b4397272af1eff66bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '866aafda5b674362d2db91e9d9830ee9') in 0.008761 seconds
+  Import took 0.012021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 6.jpg
+  artifactKey: Guid(6dc28c8cb55d7f940a578297940e9347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 6.jpg using Guid(6dc28c8cb55d7f940a578297940e9347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b6d0b752994eeed3f156be770a7ed56') in 0.008559 seconds
+  Import took 0.011734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 9.jpg
+  artifactKey: Guid(97ccf6db8260b604481b13a78238a23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 9.jpg using Guid(97ccf6db8260b604481b13a78238a23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '133ee11315b6b5e61e4bc097ff3d672f') in 0.006737 seconds
+  Import took 0.009883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 4.jpg
+  artifactKey: Guid(5266242164df91d46b05dda844217cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 4.jpg using Guid(5266242164df91d46b05dda844217cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61729a76b0691835030b1614f8553e17') in 0.006855 seconds
+  Import took 0.010670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.217839 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 4.jpg
+  artifactKey: Guid(5266242164df91d46b05dda844217cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 4.jpg using Guid(5266242164df91d46b05dda844217cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35e1ad8ebb556ba625feaf7f81d97b05') in 0.045658 seconds
+  Import took 0.049139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 8.jpg
+  artifactKey: Guid(c6d990c3ec302ad44985eb381c20ec47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 8.jpg using Guid(c6d990c3ec302ad44985eb381c20ec47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67b4c78fa2a82eaadc113981fc2545d8') in 0.143752 seconds
+  Import took 0.148402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 5.jpg
+  artifactKey: Guid(1465d2f8dc36a5945800906b9f8869c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 5.jpg using Guid(1465d2f8dc36a5945800906b9f8869c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92bb92afa36ef40cec172a973b87fcb7') in 0.069236 seconds
+  Import took 0.073494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 3.jpg
+  artifactKey: Guid(8119e9c6183bbd54a83d20abee38b098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 3.jpg using Guid(8119e9c6183bbd54a83d20abee38b098) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '381315b725e1a86cf00a14913affe5c4') in 0.089012 seconds
+  Import took 0.238670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Start Area.jpg
+  artifactKey: Guid(6ffd5307c8c20984abe6345a74b2976d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Start Area.jpg using Guid(6ffd5307c8c20984abe6345a74b2976d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fea226514398bb7d9b40f94f2f1a818c') in 0.028731 seconds
+  Import took 0.031885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 1.jpg
+  artifactKey: Guid(ab2985530d703b14da1a2460f1a3d03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 1.jpg using Guid(ab2985530d703b14da1a2460f1a3d03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d8b644f259e44241aa0656963315552') in 0.072028 seconds
+  Import took 0.077141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 7.jpg
+  artifactKey: Guid(ce83f898c93b68543bffdfcdaad3d869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 7.jpg using Guid(ce83f898c93b68543bffdfcdaad3d869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '452e9777bfe26cccd106d62bb63e9fda') in 0.067414 seconds
+  Import took 0.071292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 2.jpg
+  artifactKey: Guid(2a28b1330e70c7b4397272af1eff66bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 2.jpg using Guid(2a28b1330e70c7b4397272af1eff66bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7b464d42da9041b648ca8dccd5a220c') in 0.052306 seconds
+  Import took 0.056538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 6.jpg
+  artifactKey: Guid(6dc28c8cb55d7f940a578297940e9347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 6.jpg using Guid(6dc28c8cb55d7f940a578297940e9347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9402ae58fed5a0553fea06b87bfa5aa7') in 0.011715 seconds
+  Import took 0.015201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/1.RocketJumperFiles/Level Layout/Section 9.jpg
+  artifactKey: Guid(97ccf6db8260b604481b13a78238a23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Level Layout/Section 9.jpg using Guid(97ccf6db8260b604481b13a78238a23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b505045a35f684231da48b0bf8e2cb99') in 0.041930 seconds
+  Import took 0.046296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 79.742560 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles
+  artifactKey: Guid(a2ef80c00f8ca3b4292b355455115094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles using Guid(a2ef80c00f8ca3b4292b355455115094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef5c5a2d4eb00a0cddfe67fef1a83de5') in 0.002615 seconds
+  Import took 0.006746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000372 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles
+  artifactKey: Guid(a2ef80c00f8ca3b4292b355455115094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles using Guid(a2ef80c00f8ca3b4292b355455115094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef5c5a2d4eb00a0cddfe67fef1a83de5') in 0.002757 seconds
+  Import took 0.005942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.036243 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Ceiling.png
+  artifactKey: Guid(67678f32b1ce8574b83c709b9e77f55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Ceiling.png using Guid(67678f32b1ce8574b83c709b9e77f55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3af53e5c17cfa0339d4b6872e39a4d97') in 0.215047 seconds
+  Import took 0.218352 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Floating_Platform.png
+  artifactKey: Guid(32335b71e63811646ac9ec17f7470f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Floating_Platform.png using Guid(32335b71e63811646ac9ec17f7470f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a243bfe29a75fc3e04661416b7e51b') in 0.007117 seconds
+  Import took 0.010472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Wall_Back.png
+  artifactKey: Guid(2944887cdb374be4f9a58c1eb14e25b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Wall_Back.png using Guid(2944887cdb374be4f9a58c1eb14e25b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f7da1387558c661805fd1615748604e') in 0.009351 seconds
+  Import took 0.047431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Concrete.png
+  artifactKey: Guid(ea9f95fda9e5eb346938bd6bc69603b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Concrete.png using Guid(ea9f95fda9e5eb346938bd6bc69603b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18565a85f88bf46b0947c14ba1ca6253') in 0.006479 seconds
+  Import took 0.009709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Wall.png
+  artifactKey: Guid(a8934da25c5f7674f9ed44119dcf42df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Wall.png using Guid(a8934da25c5f7674f9ed44119dcf42df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd465a0df84f8e7c42d1eaaf426f138bd') in 0.006482 seconds
+  Import took 0.017573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Floor.png
+  artifactKey: Guid(c9e3c8270dba5cb438529e255caa973d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Floor.png using Guid(c9e3c8270dba5cb438529e255caa973d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9109b763954f83509ceb18fc59501152') in 0.008951 seconds
+  Import took 0.012475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002890 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Wall.png
+  artifactKey: Guid(a8934da25c5f7674f9ed44119dcf42df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Wall.png using Guid(a8934da25c5f7674f9ed44119dcf42df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd465a0df84f8e7c42d1eaaf426f138bd') in 0.006079 seconds
+  Import took 0.010048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.391082 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Wall_Back.png
+  artifactKey: Guid(2944887cdb374be4f9a58c1eb14e25b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Wall_Back.png using Guid(2944887cdb374be4f9a58c1eb14e25b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc52dd63711a15f88ab6fab9b26fd8e4') in 0.013692 seconds
+  Import took 0.016966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011520 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Ceiling.png
+  artifactKey: Guid(67678f32b1ce8574b83c709b9e77f55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Ceiling.png using Guid(67678f32b1ce8574b83c709b9e77f55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdc35b07017cedf84c5551fc3b56e03a') in 0.011853 seconds
+  Import took 0.015341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Floating_Platform.png
+  artifactKey: Guid(32335b71e63811646ac9ec17f7470f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Floating_Platform.png using Guid(32335b71e63811646ac9ec17f7470f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a827f0bfde9e94ff4ea20598a1fb73af') in 0.009417 seconds
+  Import took 0.012707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Concrete.png
+  artifactKey: Guid(ea9f95fda9e5eb346938bd6bc69603b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Concrete.png using Guid(ea9f95fda9e5eb346938bd6bc69603b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa717d7c69595338ff87c45dde733a5a') in 0.010206 seconds
+  Import took 0.027008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Wall.png
+  artifactKey: Guid(a8934da25c5f7674f9ed44119dcf42df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Wall.png using Guid(a8934da25c5f7674f9ed44119dcf42df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a1f4c62378657fcfdfaea288fb163e8') in 0.009775 seconds
+  Import took 0.014389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/1.RocketJumperFiles/Art/Tiles/Floor.png
+  artifactKey: Guid(c9e3c8270dba5cb438529e255caa973d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1.RocketJumperFiles/Art/Tiles/Floor.png using Guid(c9e3c8270dba5cb438529e255caa973d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f336204df0deef5cd69a1fdd04e79334') in 0.010266 seconds
+  Import took 0.014526 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

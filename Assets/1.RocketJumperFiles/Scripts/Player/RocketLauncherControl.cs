@@ -9,7 +9,7 @@ public class RocketLauncherControl : MonoBehaviour
     [Header("Rocket Aimming")]
     [SerializeField] private Transform rightShoulder;
     [SerializeField] private Transform leftShoulder;
-    [SerializeField] private Transform rocket;
+    public Transform rocket;
     private float rightShoulderInitialAngle;
     private float leftShoulderInitialAngle;
     private float leftShoulderAngleDiff;
@@ -46,6 +46,7 @@ public class RocketLauncherControl : MonoBehaviour
     public float explosionRadius;
     public float upwardsModifier;
     public Vector2 playerCenterOffset;
+    public float wallJumpModifier;
     public LayerMask ExplosionCanHit;
     [System.NonSerialized]public float forceToApply;
 
@@ -150,6 +151,8 @@ public class RocketLauncherControl : MonoBehaviour
         Gizmos.DrawWireSphere(rocket.TransformPoint((Vector3)rocketSpawnOffset), sizeOfCast);
 
         Gizmos.DrawWireSphere(transform.position + (Vector3)playerCenterOffset, 0.5f);
+
+        Gizmos.DrawWireSphere(transform.position + Vector3.up * wallJumpModifier, 0.5f);
 
     }
 }

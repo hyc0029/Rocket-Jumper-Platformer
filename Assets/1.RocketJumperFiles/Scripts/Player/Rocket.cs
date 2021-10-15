@@ -71,7 +71,7 @@ public class Rocket : MonoBehaviour
                     Vector2 playerCenterOffset = Vector2.zero;
                     if (cc.walledCheck())
                     {
-                        playerCenterOffset = Vector2.up * 6;
+                        playerCenterOffset = Vector2.up * rlc.wallJumpModifier;
                     }
                     else
                     {
@@ -88,7 +88,7 @@ public class Rocket : MonoBehaviour
                         explosionDir.Normalize();
                     }
 
-                    if (cc.resetVerticalVelocityCheck() && !cc.groundCheck())
+                    if (cc.resetVerticalVelocityCheck())
                         thisRB2D.velocity = new Vector3(thisRB2D.velocity.x, 0, 0);
 
                     //Vector2 explosionForce = Mathf.Lerp(0, rlc.forceToApply, (rlc.explosionRadius - explosionDistance)) * explosionDir;

@@ -4,45 +4,18 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject pause;
-    [SerializeField] private GameObject setting;
+    [SerializeField] private GameObject controls;
 
     // Start is called before the first frame update
     void Start()
     {
-        pause.SetActive(false);
+        controls.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-            pauseAndUnpauseGame();
-    }
-
-
-    public void pauseAndUnpauseGame()
-    {
-        pause.SetActive(!pause.activeSelf);
-        pauseGame(pause.activeSelf);
-    }
-
-    public void settingMenu()
-    {
-        setting.SetActive(!setting.activeSelf);
-    }
-
-    public void quitGame()
-    {
-        Application.Quit();
-    }
-
-    void pauseGame(bool paused)
-    {
-        if (paused)
-            Time.timeScale = 0;
-        else
-            Time.timeScale = 1;
+        controls.SetActive(Input.GetKey(KeyCode.Tab));
     }
 
 }

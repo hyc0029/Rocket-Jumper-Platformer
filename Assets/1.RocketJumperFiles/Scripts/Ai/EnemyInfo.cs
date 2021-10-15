@@ -23,6 +23,7 @@ public class EnemyInfo : MonoBehaviour
     public Vector2 forwardGroundDetectionOrigin;
     public float forwardGroundDetectionRange;
     public LayerMask forwardDetectionLayermasks;
+    public LayerMask downwardDetectionLayerMasks;
 
     [Header("Player Detection")]
     public Transform myEyeTrans;

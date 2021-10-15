@@ -24,39 +24,46 @@ public class PlayerAirControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        leftRight = Input.GetKey(KeyCode.D) ? 1 : 0 - (Input.GetKey(KeyCode.A) ? 1 : 0);
+        if (cc.myCol.enabled)
+        {
+            leftRight = Input.GetKey(KeyCode.D) ? 1 : 0 - (Input.GetKey(KeyCode.A) ? 1 : 0);
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-        {
-            if(!thrustSound.isPlaying)
-                thrustSound.Play();
-            if (leftRight > 0)
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
-                forwardThrustParticle.Play();
-                backwardThrustParticle.Stop();
+                if (!thrustSound.isPlaying)
+                    thrustSound.Play();
+                if (leftRight > 0)
+                {
+                    forwardThrustParticle.Play();
+                    backwardThrustParticle.Stop();
+                }
+                else if (leftRight < 0)
+                {
+                    backwardThrustParticle.Play();
+                    forwardThrustParticle.Stop();
+                }
             }
-            else if (leftRight < 0)
+            if (leftRight == 0)
             {
-                backwardThrustParticle.Play();
                 forwardThrustParticle.Stop();
+                backwardThrustParticle.Stop();
+                thrustSound.Stop();
             }
-        }
-        if (leftRight == 0)
-        {
-            forwardThrustParticle.Stop();
-            backwardThrustParticle.Stop();
-            thrustSound.Stop();
-        }
-        if (cc.groundCheck() && leftRight != 0 && playerRb.velocity.magnitude < groundedMoveSpeed)
-        {
-            playerRb.AddForce(transform.right * leftRight * 1000);
+            if (cc.groundCheck() && leftRight != 0 && playerRb.velocity.magnitude < groundedMoveSpeed)
+            {
+                playerRb.AddForce(transform.right * leftRight * 1000);
+            }
         }
     }
 
     private void FixedUpdate()
     {
         if (!cc.groundCheck())
-            playerRb.AddForce(transform.right * leftRight * (airControlForce));
+        {
+            Vector2 velocity = playerRb.velocity;
+            velocity.x += leftRight*((airControlForce + 0.1f * playerRb.velocity.x) * Time.fixedDeltaTime);
+            playerRb.velocity = velocity;
+        }
     }
 
 }

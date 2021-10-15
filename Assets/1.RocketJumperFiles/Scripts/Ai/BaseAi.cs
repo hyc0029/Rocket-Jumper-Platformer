@@ -22,7 +22,7 @@ public class BaseAi : MonoBehaviour
         cf.SetLayerMask(layers);
         Physics2D.Raycast(transform.TransformPoint(origin), transform.right, cf, hits, distance);
 
-        if (hits.Count > 1)
+        if (hits.Count > 0)
             return true;
         else
             return false;
@@ -49,8 +49,17 @@ public class BaseAi : MonoBehaviour
     public void moveTowardPlayer(Rigidbody2D rb2d, Transform target, float speed)
     {
         float xDir = (rb2d.position.x < target.position.x ? 1 : 0) - (rb2d.position.x > target.position.x ? 1 : 0);
-        rb2d.velocity = new Vector3(xDir * speed, rb2d.velocity.y, 0);
-        if (rb2d.transform.GetChild(0).InverseTransformPoint(target.position).x < 0)
+        float xDistance = Mathf.Abs(rb2d.position.x - target.position.x);
+        if (xDistance > 5f)
+        {
+            rb2d.velocity = new Vector3(xDir * speed, rb2d.velocity.y, 0);
+        }
+        else
+        {
+            rb2d.velocity = new Vector3(0, rb2d.velocity.y, 0);
+        }
+
+        if (rb2d.transform.GetChild(0).InverseTransformPoint(target.position).x < -5)
             rb2d.transform.GetChild(0).Rotate(new Vector3(0, 180, 0));
     }
 
@@ -90,6 +99,22 @@ public class BaseAi : MonoBehaviour
             animator.SetBool(boolName, true);
             col.enabled = false;
         }
+    }
+
+    public IEnumerator blinkDestroy(GameObject objectToBlink)
+    {
+        float timeBetweenBlinks = 0.2f;
+        float numberOfBlinks = 3;
+
+        for (int i = 0; i < numberOfBlinks; i++)
+        {
+            yield return new WaitForSeconds(timeBetweenBlinks);
+            objectToBlink.transform.GetChild(0).gameObject.SetActive(false);
+            yield return new WaitForSeconds(0.1f);
+            objectToBlink.transform.GetChild(0).gameObject.SetActive(true);
+        }
+
+        Destroy(objectToBlink);
     }
 
 

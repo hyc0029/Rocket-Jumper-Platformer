@@ -15,6 +15,7 @@ public class DogAi : BaseAi
     [SerializeField] private LayerMask enemies;
     [System.NonSerialized] public bool calledByDog;
 
+    bool blinking;
     private void Start()
     {
         myInfo = GetComponent<EnemyInfo>();
@@ -26,26 +27,38 @@ public class DogAi : BaseAi
     {
         if (isAlive(myInfo.health))
         {
-            if (!detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.detectionRange, myInfo.playerMask) && !myInfo.haveDetectedPlayer && !calledByDog)
-                patrolling();
-            else
+
+            myInfo.myAnimator.SetFloat("xVelocity", Mathf.Abs(myInfo.myRB2D.velocity.x));
+
+            if (FindObjectOfType<CharacterController>().myCol.enabled)
             {
-                ActivateAllNearbyDogs();
-                myInfo.haveDetectedPlayer = true;
-                myInfo.myAnimator.SetBool("Attack", attacking);
-                if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask))
-                {
-                    if (!attacking)
-                        jumpToPlayer();
-                }
+                if (!detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.detectionRange, myInfo.playerMask) && !myInfo.haveDetectedPlayer && !calledByDog)
+                    patrolling();
                 else
                 {
-                    moveTowardPlayer(myInfo.myRB2D, FindObjectOfType<CharacterController>().transform, myInfo.movementSpeed);
+                    ActivateAllNearbyDogs();
+                    myInfo.haveDetectedPlayer = true;
+                    myInfo.myAnimator.SetBool("Attack", attacking);
+                    if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask) || attacking)
+                    {
+                        if (!attacking)
+                            jumpToPlayer();
+                    }
+                    else
+                    {
+                        if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask))
+                            moveTowardPlayer(myInfo.myRB2D, FindObjectOfType<CharacterController>().transform, myInfo.movementSpeed);
+                    }
+                    if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask) && attacking)
+                    {
+                        attacking = false;
+                    }
                 }
-                if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask) && attacking)
-                {
-                    attacking = false;
-                }
+            }
+            else
+            {
+                patrolling();
+                myInfo.myAnimator.SetBool("Attack", false);
             }
         }
         else
@@ -56,6 +69,11 @@ public class DogAi : BaseAi
             {
                 myInfo.myRB2D.gravityScale = 0;
                 myInfo.myRB2D.velocity = Vector2.zero;
+                if (!blinking)
+                {
+                    StartCoroutine(blinkDestroy(gameObject));
+                    blinking = true;
+                }
             }
             else
                 myInfo.myRB2D.gravityScale = 1;
@@ -64,8 +82,11 @@ public class DogAi : BaseAi
 
     void patrolling()
     {
-        if (checkForward(transform.GetChild(0).transform, myInfo.forwardDetectionOrigin, myInfo.changeMovingDirectionDtectionRange, myInfo.forwardDetectionLayermasks) || checkForwardDown(transform.GetChild(0).transform, myInfo.forwardGroundDetectionOrigin, myInfo.forwardGroundDetectionRange, myInfo.forwardDetectionLayermasks))
-            transform.GetChild(0).transform.Rotate(new Vector3(0, 180, 0));
+        if (checkForward(transform.GetChild(0).transform, myInfo.forwardDetectionOrigin, myInfo.changeMovingDirectionDtectionRange, myInfo.forwardDetectionLayermasks) || checkForwardDown(transform.GetChild(0).transform, myInfo.forwardGroundDetectionOrigin, myInfo.forwardGroundDetectionRange, myInfo.downwardDetectionLayerMasks))
+        {
+            if(groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask))
+                transform.GetChild(0).transform.Rotate(new Vector3(0, 180, 0));
+        }
         basicMovement(myInfo.myRB2D, transform.GetChild(0).transform, myInfo.movementSpeed);
     }
 
@@ -101,9 +122,14 @@ public class DogAi : BaseAi
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.GetComponent<CharacterController>() && attacking)
+        if (collision.transform.GetComponent<CharacterController>() && attacking && FindObjectOfType<CharacterController>().stompedEnemies.Length <= 0)
         {
             collision.transform.GetComponent<CharacterController>().playerDead();
+        }
+
+        if (collision.transform.GetComponent<EnemyInfo>())
+        {
+            collision.transform.GetChild(0).transform.Rotate(new Vector3(0, 180, 0));
         }
     }
 

@@ -364,7 +364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6035093149790877197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -6, z: 0}
+  m_LocalPosition: {x: 0, y: -6.23999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6035093149915290321}
@@ -1874,17 +1874,20 @@ MonoBehaviour:
   forwardDetectionOrigin: {x: 0, y: 1}
   changeMovingDirectionDtectionRange: 2
   forwardGroundDetectionOrigin: {x: 2, y: 1}
-  forwardGroundDetectionRange: 1.1
+  forwardGroundDetectionRange: 6
   forwardDetectionLayermasks:
     serializedVersion: 2
-    m_Bits: 1600
+    m_Bits: 1088
+  downwardDetectionLayerMasks:
+    serializedVersion: 2
+    m_Bits: 64
   myEyeTrans: {fileID: 1904713499111065782}
   detectionRange: 50
   playerMask:
     serializedVersion: 2
     m_Bits: 128
   haveDetectedPlayer: 0
-  attackRange: 100
+  attackRange: 70
 --- !u!114 &2194355090930757500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1898,7 +1901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myArm: {fileID: 6035093151417226541}
-  aimTime: 1
+  aimTime: 3
   projectile: {fileID: 6416893603840670737}
   projectileOffset: {x: 0, y: -8}
   delayAfterFiring: 1
@@ -2463,7 +2466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6035093151246424062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -2, z: 0}
+  m_LocalPosition: {x: 1, y: -2.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6035093150520049488}

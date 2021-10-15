@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[ExecuteAlways]
 [RequireComponent(typeof(Camera))]
-
 public class CameraController : MonoBehaviour
 {
     private Camera mainCam;
@@ -44,7 +43,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale != 0)
+        if (player.myCol.enabled)
         {
             CameraSizeController();
             CameraPositionController();

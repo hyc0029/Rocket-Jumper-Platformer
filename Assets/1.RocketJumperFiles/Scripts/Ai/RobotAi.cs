@@ -15,11 +15,11 @@ public class RobotAi : BaseAi
     [Header("Firing")]
     [SerializeField] private GameObject projectile;
     [SerializeField] private Vector2 projectileOffset;
-    [SerializeField] private float delayAfterFiring;
-    private float postFiringTimer;
 
     [Header("Projectile")]
     public float projectileSpeed;
+
+    bool blinking;
 
     private void Start()
     {
@@ -28,26 +28,34 @@ public class RobotAi : BaseAi
 
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (isAlive(myInfo.health))
         {
-            if (!detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.detectionRange, myInfo.playerMask) && !myInfo.haveDetectedPlayer)
-                patrolling();
-            else
+
+            myInfo.myAnimator.SetFloat("xVelocity", Mathf.Abs(myInfo.myRB2D.velocity.x));
+
+            if (FindObjectOfType<CharacterController>().myCol.enabled)
             {
-                myInfo.haveDetectedPlayer = true;
-                if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask))
-                {
-                    if (!attacking)
-                        AimAtPlayer();
-                    else
-                        postFiring();
-                }
+                if (!detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.detectionRange, myInfo.playerMask) && !myInfo.haveDetectedPlayer)
+                    patrolling();
                 else
                 {
-                    moveTowardPlayer(myInfo.myRB2D, FindObjectOfType<CharacterController>().transform, myInfo.movementSpeed);
+                    myInfo.haveDetectedPlayer = true;
+                    if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask))
+                    {
+                        AimAtPlayer();
+                    }
+                    else
+                    {
+                        if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask))
+                            moveTowardPlayer(myInfo.myRB2D, FindObjectOfType<CharacterController>().transform, myInfo.movementSpeed);
+                    }
                 }
+            }
+            else
+            {
+                patrolling();
             }
         }
         else
@@ -57,6 +65,11 @@ public class RobotAi : BaseAi
             {
                 myInfo.myRB2D.gravityScale = 0;
                 myInfo.myRB2D.velocity = Vector2.zero;
+                if (!blinking)
+                {
+                    StartCoroutine(blinkDestroy(gameObject));
+                    blinking = true;
+                }
             }
             else
                 myInfo.myRB2D.gravityScale = 1;
@@ -65,8 +78,11 @@ public class RobotAi : BaseAi
 
     void patrolling()
     {
-        if (checkForward(transform.GetChild(0).transform, myInfo.forwardDetectionOrigin, myInfo.changeMovingDirectionDtectionRange, myInfo.forwardDetectionLayermasks) || checkForwardDown(transform.GetChild(0).transform, myInfo.forwardGroundDetectionOrigin, myInfo.forwardGroundDetectionRange, myInfo.forwardDetectionLayermasks))
-            transform.GetChild(0).transform.Rotate(new Vector3(0, 180, 0));
+        if (checkForward(transform.GetChild(0).transform, myInfo.forwardDetectionOrigin, myInfo.changeMovingDirectionDtectionRange, myInfo.forwardDetectionLayermasks) || checkForwardDown(transform.GetChild(0).transform, myInfo.forwardGroundDetectionOrigin, myInfo.forwardGroundDetectionRange, myInfo.downwardDetectionLayerMasks))
+        {
+            if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask))
+                transform.GetChild(0).transform.Rotate(new Vector3(0, 180, 0));
+        }
         basicMovement(myInfo.myRB2D, transform.GetChild(0).transform, myInfo.movementSpeed);
     }
 
@@ -96,33 +112,23 @@ public class RobotAi : BaseAi
 
     void ShootAtPlayer()
     {
-        if (!attacking)
-        {
-            RobotEnergyBall thisEnergyBall =  Instantiate(projectile, myArm.TransformPoint(projectileOffset), myArm.rotation * Quaternion.AngleAxis(-90, Vector3.forward)).GetComponent<RobotEnergyBall>();
-            thisEnergyBall.myRobot = this;
-            thisEnergyBall.gameObject.SetActive(true);
-            postFiringTimer = 0;
-            attacking = true;
-        }
+        RobotEnergyBall thisEnergyBall =  Instantiate(projectile, myArm.TransformPoint(projectileOffset), myArm.rotation * Quaternion.AngleAxis(-90, Vector3.forward)).GetComponent<RobotEnergyBall>();
+        thisEnergyBall.myRobot = this;
+        thisEnergyBall.gameObject.SetActive(true);
+        aimTimer = 0;
     }
 
-    void postFiring()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (postFiringTimer < delayAfterFiring)
-            postFiringTimer += Time.deltaTime;
-        else
+        if (collision.transform.GetComponent<EnemyInfo>())
         {
-            aimTimer = 0;
-            attacking = false;
-            Debug.Log("Reseted");
+            collision.transform.GetChild(0).transform.Rotate(new Vector3(0, 180, 0));
         }
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(myArm.transform.position, (Vector2)FindObjectOfType<CharacterController>().transform.position - (Vector2)myArm.position);
-
         Gizmos.DrawWireSphere(myArm.TransformPoint(projectileOffset), 1);
     }
 
