@@ -21,7 +21,7 @@ public class StompKill : MonoBehaviour
                 col.gameObject.GetComponent<EnemyInfo>().health = 0;
 
             Vector3 vel = CC.playerRigidbody.velocity;
-            vel.y = 30;
+            vel.y = 25f;
             CC.playerRigidbody.velocity = vel;
         }
     }

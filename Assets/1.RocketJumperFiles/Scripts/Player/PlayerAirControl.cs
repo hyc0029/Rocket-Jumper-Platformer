@@ -51,8 +51,14 @@ public class PlayerAirControl : MonoBehaviour
             }
             if (cc.groundCheck() && leftRight != 0 && playerRb.velocity.magnitude < groundedMoveSpeed)
             {
-                playerRb.AddForce(transform.right * leftRight * 1000);
+                playerRb.velocity = Vector3.right * leftRight * groundedMoveSpeed;
             }
+        }
+        else
+        {
+            forwardThrustParticle.Stop();
+            backwardThrustParticle.Stop();
+            thrustSound.Stop();
         }
     }
 

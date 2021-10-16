@@ -149,20 +149,25 @@ public class CharacterController : MonoBehaviour
     public void playerDead()
     {
         myCol.enabled = false;
+        myAnimator.SetBool("Dead", true);
         playerRigidbody.simulated = false;
         myRLC.enabled = false;
         for (int i = 0; i < bodyParts.Length; i++)
         {
+
             bodyParts[i].partCollider.transform.SetParent(null);
             bodyParts[i].partCollider.enabled = true;
             Rigidbody2D temp = bodyParts[i].partCollider.gameObject.AddComponent<Rigidbody2D>();
             temp.mass = 25;
-            temp.interpolation = RigidbodyInterpolation2D.None;
+            temp.interpolation = RigidbodyInterpolation2D.Extrapolate;
+
             Vector2 explosionDirection = (Vector2)bodyParts[i].partCollider.transform.position - (Vector2)body.transform.position;
             explosionDirection.y += 1;
             explosionDirection.Normalize();
 
             temp.AddForce(explosionDirection * explosionForce, ForceMode2D.Impulse);
+
+            temp.AddTorque(Random.Range((int)-1, (int)2) * 500, ForceMode2D.Impulse);
 
         }
 

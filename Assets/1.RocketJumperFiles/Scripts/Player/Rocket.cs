@@ -31,14 +31,22 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!exploded)
-            RocketHitDetection();
+        if (rlc.GetComponent<CharacterController>().myCol.enabled)
+        {
+            if (!exploded)
+                RocketHitDetection();
+            else
+            {
+                if (!explosionParticleSystem.IsAlive())
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
         else
         {
             if (!explosionParticleSystem.IsAlive())
-            {
                 Destroy(gameObject);
-            }
         }
     }
 
@@ -90,6 +98,8 @@ public class Rocket : MonoBehaviour
 
                     if (cc.resetVerticalVelocityCheck())
                         thisRB2D.velocity = new Vector3(thisRB2D.velocity.x, 0, 0);
+                    else if (cc.groundCheck())
+                        thisRB2D.velocity = new Vector3(0, 0, 0);
 
                     //Vector2 explosionForce = Mathf.Lerp(0, rlc.forceToApply, (rlc.explosionRadius - explosionDistance)) * explosionDir;
                     Vector2 explosionForce = rlc.forceToApply * explosionDir;

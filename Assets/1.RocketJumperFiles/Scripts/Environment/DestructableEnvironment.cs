@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteAlways]
 public class DestructableEnvironment : MonoBehaviour
 {
-    [SerializeField] private Collider2D col;
+    [SerializeField] private BoxCollider2D col;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private ParticleSystem destructionParticle;
+    private float height;
+    [SerializeField] private LayerMask layerMasks;
+    private RaycastHit2D hitLocalUp;
+    private RaycastHit2D hitLocalDown;
 
     [Header("Camera Shake")]
     [SerializeField] private float magnitude;
@@ -18,6 +23,21 @@ public class DestructableEnvironment : MonoBehaviour
         spriteRenderer.enabled = false;
         destructionParticle.Play();
         StartCoroutine(CameraShake());
+    }
+
+    private void Update()
+    {
+        hitLocalUp = Physics2D.Raycast(transform.position, transform.up, Mathf.Infinity, layerMasks);
+        hitLocalDown = Physics2D.Raycast(transform.position, -transform.up, Mathf.Infinity, layerMasks);
+
+        height = Vector2.Distance(hitLocalUp.point, hitLocalDown.point);
+
+        Vector2 newSize = new Vector2(1, height+2);
+        col.size = newSize;
+        spriteRenderer.size = newSize;
+        
+        var tempParticle = destructionParticle.shape;
+        tempParticle.scale = (Vector3)newSize + Vector3.forward;
     }
 
     IEnumerator CameraShake()

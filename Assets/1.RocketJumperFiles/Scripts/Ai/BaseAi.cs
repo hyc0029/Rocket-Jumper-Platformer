@@ -73,7 +73,7 @@ public class BaseAi : MonoBehaviour
             rayHits2D = Physics2D.RaycastAll(eyePos.position, directionToPlayer.normalized, directionToPlayer.magnitude);
             if (rayHits2D.Length > 0)
             {
-                if (rayHits2D[0].transform.GetComponent<CharacterController>())
+                if (rayHits2D[0].transform.root.GetComponent<CharacterController>())
                     return true;
                 else
                     return false;

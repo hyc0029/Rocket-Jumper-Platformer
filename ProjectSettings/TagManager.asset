@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LevelComplete
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - rocket
   - Enemy
   - destructable
-  - 
-  - 
+  - wall
+  - ceiling
   - 
   - 
   - 
@@ -40,6 +41,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: MidGround
+    uniqueID: 2634192731
+    locked: 0
+  - name: Fg_Behind_Floor_Ceiling
+    uniqueID: 606960861
+    locked: 0
+  - name: Fg_Behind_Player
+    uniqueID: 698396233
+    locked: 0
+  - name: Fg_Corner
+    uniqueID: 3099379533
     locked: 0
   - name: BackBody
     uniqueID: 1284339589

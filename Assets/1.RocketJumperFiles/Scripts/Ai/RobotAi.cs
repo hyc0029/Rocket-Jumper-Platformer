@@ -32,9 +32,6 @@ public class RobotAi : BaseAi
     {
         if (isAlive(myInfo.health))
         {
-
-            myInfo.myAnimator.SetFloat("xVelocity", Mathf.Abs(myInfo.myRB2D.velocity.x));
-
             if (FindObjectOfType<CharacterController>().myCol.enabled)
             {
                 if (!detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.detectionRange, myInfo.playerMask) && !myInfo.haveDetectedPlayer)
@@ -42,7 +39,7 @@ public class RobotAi : BaseAi
                 else
                 {
                     myInfo.haveDetectedPlayer = true;
-                    if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask))
+                    if(detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask) || attacking)
                     {
                         AimAtPlayer();
                     }
@@ -57,6 +54,7 @@ public class RobotAi : BaseAi
             {
                 patrolling();
             }
+            myInfo.myAnimator.SetFloat("xVelocity", Mathf.Abs(myInfo.myRB2D.velocity.x));
         }
         else
         {
@@ -88,7 +86,7 @@ public class RobotAi : BaseAi
 
     void AimAtPlayer()
     {
-
+        attacking = true;
         Vector2 playerPos = (Vector2)FindObjectOfType<CharacterController>().transform.position;
 
         playerPos.y += 5;
@@ -106,6 +104,9 @@ public class RobotAi : BaseAi
         myArm.localRotation = Quaternion.Slerp(myArm.rotation, rot, 1);
         aimTimer += Time.deltaTime;
 
+        if (transform.GetChild(0).InverseTransformPoint(FindObjectOfType<CharacterController>().transform.position).x < -3)
+            transform.GetChild(0).Rotate(new Vector3(0, 180, 0));
+
         if (aimTimer > aimTime)
             ShootAtPlayer();
     }
@@ -116,6 +117,7 @@ public class RobotAi : BaseAi
         thisEnergyBall.myRobot = this;
         thisEnergyBall.gameObject.SetActive(true);
         aimTimer = 0;
+        attacking = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
