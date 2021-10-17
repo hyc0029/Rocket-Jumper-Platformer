@@ -52,6 +52,7 @@ public class RobotAi : BaseAi
             }
             else
             {
+                myInfo.haveDetectedPlayer = false;
                 patrolling();
             }
             myInfo.myAnimator.SetFloat("xVelocity", Mathf.Abs(myInfo.myRB2D.velocity.x));

@@ -19,9 +19,14 @@ public class RocketLauncherControl : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image chargeImg;
     [SerializeField] private ParticleSystem chargingRocketParticle;
     [SerializeField] private AudioSource chargingRocketSound;
+    [SerializeField] private SpriteRenderer LauncherSR;
+    [SerializeField] private Color newClr;
+    [SerializeField] private Color originalClr;
+
     private float currentHoldTime;
     private float timePerIncreaseForce;
     private int currentSelectedForce;
+    private float origialFillAmount;
 
     [Header("Firing Rocket")]
     [SerializeField] private GameObject rocketToBeFired;
@@ -45,6 +50,7 @@ public class RocketLauncherControl : MonoBehaviour
     public float[] forces;
     public float explosionRadius;
     public float upwardsModifier;
+    public float WalledAngleUpwardModifier;
     public Vector2 playerCenterOffset;
     public float wallJumpModifier;
     public LayerMask ExplosionCanHit;
@@ -54,7 +60,7 @@ public class RocketLauncherControl : MonoBehaviour
     void Start()
     {
         bodyRot = transform.GetChild(0);
-
+        originalClr = LauncherSR.material.GetColor("_EmissionColor");
         rightShoulderInitialAngle = rightShoulder.eulerAngles.z;
         leftShoulderInitialAngle = leftShoulder.eulerAngles.z;
         leftShoulderAngleDiff = rightShoulderInitialAngle - leftShoulderInitialAngle;
@@ -130,18 +136,23 @@ public class RocketLauncherControl : MonoBehaviour
                 Instantiate(rocketToBeFired, rocket.TransformPoint((Vector3)rocketSpawnOffset), rocket.rotation);
                 currentHoldTime = 0;
                 currentSelectedForce = 0;
-                chargeImg.fillAmount = 0;
                 timeBetweenShotsTimer = 0;
+                LauncherSR.material.SetColor("_EmissionColor", newClr);
+                origialFillAmount = chargeImg.fillAmount;
                 chargingRocketParticle.Stop();
                 canFireRocket = false;
             }
         }
         else
         {
+            chargeImg.fillAmount = Mathf.Lerp(origialFillAmount, 0, timeBetweenShotsTimer / actualTimeBetweenShots);
             if (timeBetweenShotsTimer < actualTimeBetweenShots)
                 timeBetweenShotsTimer += Time.deltaTime;
             else
+            {
                 canFireRocket = true;
+                LauncherSR.material.SetColor("_EmissionColor", originalClr);
+            }
         }
     }
 

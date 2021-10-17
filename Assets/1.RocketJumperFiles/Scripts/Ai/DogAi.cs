@@ -15,6 +15,7 @@ public class DogAi : BaseAi
     [SerializeField] private LayerMask enemies;
     [System.NonSerialized] public bool calledByDog;
 
+    [HideInInspector]public bool canNotKillPlayer;
     bool blinking;
     private void Start()
     {
@@ -58,8 +59,15 @@ public class DogAi : BaseAi
             else
             {
                 patrolling();
+                myInfo.haveDetectedPlayer = false;
+                calledByDog = false;
                 myInfo.myAnimator.SetBool("Attack", false);
             }
+
+            if (Mathf.Abs(transform.GetChild(0).localEulerAngles.y) == 180)
+                transform.GetChild(0).localPosition = new Vector3(1.5f, transform.GetChild(0).localPosition.y, 0);
+            else
+                transform.GetChild(0).localPosition = Vector3.zero;
         }
         else
         {
@@ -122,7 +130,7 @@ public class DogAi : BaseAi
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.GetComponent<CharacterController>() && attacking && FindObjectOfType<CharacterController>().stompedEnemies.Length <= 0)
+        if (collision.transform.GetComponent<CharacterController>() && attacking && canNotKillPlayer)
         {
             collision.transform.GetComponent<CharacterController>().playerDead();
         }

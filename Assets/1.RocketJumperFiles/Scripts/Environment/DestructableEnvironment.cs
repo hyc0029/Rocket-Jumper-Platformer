@@ -32,7 +32,7 @@ public class DestructableEnvironment : MonoBehaviour
 
         height = Vector2.Distance(hitLocalUp.point, hitLocalDown.point);
 
-        Vector2 newSize = new Vector2(1, height+2);
+        Vector2 newSize = new Vector2(2, height+2);
         col.size = newSize;
         spriteRenderer.size = newSize;
         

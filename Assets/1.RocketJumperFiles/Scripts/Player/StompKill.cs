@@ -5,7 +5,6 @@ using UnityEngine;
 public class StompKill : MonoBehaviour
 {
     CharacterController CC;
-    [SerializeField] private float directionDiff;
 
     private void Start()
     {
@@ -15,25 +14,11 @@ public class StompKill : MonoBehaviour
     private void Update()
     {
         CC.onEnemyCheck();
-        if (CC.stompedEnemies.Length > 0 && CC.playerRigidbody.velocity.y < 0)
+        if (CC.stompedEnemies.Length > 0)
         {
-            foreach (Collider2D col in CC.stompedEnemies)
-                col.gameObject.GetComponent<EnemyInfo>().health = 0;
-
-            Vector3 vel = CC.playerRigidbody.velocity;
-            vel.y = 25f;
-            CC.playerRigidbody.velocity = vel;
+            foreach (Collider2D enemy in CC.stompedEnemies)
+                enemy.GetComponent<EnemyInfo>().health = 0;
         }
     }
-
-    /*
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<EnemyInfo>() && CC.onEnemyCheck())
-        {
-            collision.gameObject.GetComponent<EnemyInfo>().health = 0;
-        }
-    }
-    */
 
 }

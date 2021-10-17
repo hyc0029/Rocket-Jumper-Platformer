@@ -87,9 +87,15 @@ public class Rocket : MonoBehaviour
                     }
                     Vector2 explosionDir = (thisRB2D.position + playerCenterOffset) - explosionPoint;
                     float explosionDistance = explosionDir.magnitude;
+                    float explosionDot = Vector2.Dot(explosionDir, Vector3.up);
 
                     if (rlc.upwardsModifier == 0)
                         explosionDir /= explosionDistance;
+                    else if (cc.walledCheck() && !cc.groundCheck() && explosionDot > 0 && explosionDot < 4)
+                    {
+                        explosionDir.y += rlc.WalledAngleUpwardModifier;
+                        explosionDir.Normalize();
+                    }
                     else
                     {
                         explosionDir.y += rlc.upwardsModifier;
@@ -105,6 +111,7 @@ public class Rocket : MonoBehaviour
                     Vector2 explosionForce = rlc.forceToApply * explosionDir;
                     thisRB2D.drag = 0;
                     thisRB2D.AddForce(explosionForce, ForceMode2D.Impulse);
+
                 }
                 else if (col.GetComponent<EnemyInfo>())
                 {

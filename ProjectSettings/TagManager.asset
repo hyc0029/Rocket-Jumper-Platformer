@@ -19,8 +19,8 @@ TagManager:
   - destructable
   - wall
   - ceiling
-  - 
-  - 
+  - Do not render
+  - Launcher
   - 
   - 
   - 
@@ -41,6 +41,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackWall
+    uniqueID: 2007629155
+    locked: 0
+  - name: Concrete
+    uniqueID: 2570233077
     locked: 0
   - name: MidGround
     uniqueID: 2634192731
@@ -74,4 +80,7 @@ TagManager:
     locked: 0
   - name: OutLimbDeco
     uniqueID: 1070587519
+    locked: 0
+  - name: Particles
+    uniqueID: 3075336491
     locked: 0

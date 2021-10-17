@@ -50,7 +50,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    void CameraSizeController()
+    public void CameraSizeController()
     {
         if (player.groundCheck())
         {
@@ -79,7 +79,7 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    void CameraPositionController()
+    public void CameraPositionController()
     {
         CameraPositionChange(mainCam, mainCam.transform.position, CameraPositionCalculator(mainCam, amountOfCameraLead));
     }
@@ -96,7 +96,8 @@ public class CameraController : MonoBehaviour
 
         if (playerVelocity.magnitude > 10)
         {
-            newCameraPosition = (Vector3)playerRigidbody2D.position + ((Vector3.right * playerVelocity.normalized.x) * camLead);
+            float newCamLead = Mathf.Lerp(0, camLead, Mathf.Clamp(playerVelocity.x / 40, 0, 1));
+            newCameraPosition = (Vector3)playerRigidbody2D.position + ((Vector3.right * playerVelocity.normalized.x) * newCamLead);
         }
         else
         {

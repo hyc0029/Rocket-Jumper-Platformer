@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteAlways]
 public class Tiles : MonoBehaviour
 {
-    private float multiplier = 6.7f;
+    [SerializeField]private float multiplier = 6.7f;
     [SerializeField] private SpriteRenderer mySR;
     [SerializeField] private Vector2 tileSize;
 

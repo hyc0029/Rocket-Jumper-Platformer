@@ -11,13 +11,24 @@ public class Tazer : MonoBehaviour
     private ContactFilter2D cf;
     List<RaycastHit2D> hits = new List<RaycastHit2D>();
     [SerializeField] private LayerMask playerMask;
-
+    [SerializeField] private Vector3 Offset;
     private void Start()
     {
         cf.useLayerMask = true;
         cf.SetLayerMask(playerMask);
-        myLR.SetPosition(0, block1.localPosition);
-        myLR.SetPosition(1, block2.localPosition);
+
+        Vector2 block1TargetRot = block2.position - block1.position;
+        float angle = Mathf.Atan2(block1TargetRot.y, block1TargetRot.x) * Mathf.Rad2Deg;
+        Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
+        block1.rotation = rot;
+
+        Vector2 block2TargetRot = block1.position - block2.position;
+        float angle2 = Mathf.Atan2(block2TargetRot.y, block2TargetRot.x) * Mathf.Rad2Deg;
+        Quaternion rot2 = Quaternion.AngleAxis(angle2, Vector3.forward);
+        block2.rotation = rot2;
+
+        myLR.SetPosition(0, block1.TransformPoint(Offset));
+        myLR.SetPosition(1, block2.TransformPoint(Offset));
     }
 
     // Update is called once per frame

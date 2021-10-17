@@ -15,10 +15,10 @@ public class bodyParts
 public class CharacterController : MonoBehaviour
 {
     [System.NonSerialized]public Rigidbody2D playerRigidbody;
-    private Animator myAnimator;
+    public Animator myAnimator;
     public Collider2D myCol;
     public Transform myBodyRotationControl;
-    private RocketLauncherControl myRLC;
+    public RocketLauncherControl myRLC;
 
     [Header("Ground Check")]
     [SerializeField] private Vector2 groundCheckBoxPos;
@@ -53,11 +53,15 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float explosionForce;
     [SerializeField] private bodyParts[] bodyParts;
 
+    [Header("Reset")]
+    private PlayerRespawn playerRespawn;
+
     // Start is called before the first frame update
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        playerRespawn = GetComponent<PlayerRespawn>();
         for (int i = 0; i < bodyParts.Length; i++)
         {
             bodyParts[i].partCollider.enabled = false;
@@ -101,8 +105,9 @@ public class CharacterController : MonoBehaviour
         {
             if (UiObject.activeSelf && Input.anyKeyDown && !Input.GetMouseButtonDown(0) && !Input.GetMouseButtonDown(1) && !Input.GetMouseButtonDown(2))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                playerRespawn.ResetPlayer();
                 Time.timeScale = 1;
+                UiObject.SetActive(false);
             }
         }
 
