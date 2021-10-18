@@ -12,6 +12,13 @@ public class Tazer : MonoBehaviour
     List<RaycastHit2D> hits = new List<RaycastHit2D>();
     [SerializeField] private LayerMask playerMask;
     [SerializeField] private Vector3 Offset;
+
+    [SerializeField] private float maxVolume;
+    [SerializeField] private float RangeOfSound;
+    private float closestBlock;
+
+    private AudioSource myAudioSource;
+    private CharacterController player;
     private void Start()
     {
         cf.useLayerMask = true;
@@ -29,6 +36,9 @@ public class Tazer : MonoBehaviour
 
         myLR.SetPosition(0, block1.TransformPoint(Offset));
         myLR.SetPosition(1, block2.TransformPoint(Offset));
+
+        myAudioSource = GetComponent<AudioSource>();
+        player = FindObjectOfType<CharacterController>();
     }
 
     // Update is called once per frame
@@ -42,5 +52,22 @@ public class Tazer : MonoBehaviour
                 hits[0].transform.GetComponent<CharacterController>().playerDead();
         }
 
+        float block1DistanceFromPlayer = Vector2.Distance(player.transform.position, block1.position);
+        float block2DistanceFromPlayer = Vector2.Distance(player.transform.position, block2.position);
+
+        if (block1DistanceFromPlayer < block2DistanceFromPlayer)
+            closestBlock = block1DistanceFromPlayer;
+        else
+            closestBlock = block2DistanceFromPlayer;
+
+        myAudioSource.volume = Mathf.Lerp(0, maxVolume, 1 - Mathf.Clamp((closestBlock / RangeOfSound), 0, 1));
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireSphere(block1.position, RangeOfSound);
+        Gizmos.DrawWireSphere(block2.position, RangeOfSound);
     }
 }

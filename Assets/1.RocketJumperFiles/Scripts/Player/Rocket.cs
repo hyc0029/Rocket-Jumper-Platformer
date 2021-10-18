@@ -12,7 +12,7 @@ public class Rocket : MonoBehaviour
     [SerializeField] ParticleSystem rocketParticleSystem;
     [SerializeField] ParticleSystem explosionParticleSystem;
     [SerializeField] AudioSource explosionSound;
-    float maxVolume = 0.75f;
+    float maxVolume = 0.3f;
     float maxHearingDistance = 150;
     Vector2 oldPos;
     //[SerializeField] private LayerMask layersToDetect;

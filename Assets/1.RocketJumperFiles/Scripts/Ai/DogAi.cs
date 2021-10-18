@@ -8,6 +8,8 @@ public class DogAi : BaseAi
     [Header("Attack")]
     [SerializeField] private float jumpForce;
     [SerializeField] private float upwardModifier;
+    [SerializeField] private float preAttackIndicatorRange;
+    [SerializeField] private AudioSource preAttackSound;
     private bool attacking = false;
 
     [Header("Call All Nearby Dogs")]
@@ -28,8 +30,10 @@ public class DogAi : BaseAi
     {
         if (isAlive(myInfo.health))
         {
-
-            myInfo.myAnimator.SetFloat("xVelocity", Mathf.Abs(myInfo.myRB2D.velocity.x));
+            if (!attacking)
+                myInfo.myAnimator.SetFloat("xVelocity", Mathf.Abs(myInfo.myRB2D.velocity.x));
+            else
+                myInfo.myAnimator.SetFloat("xVelocity", 0f);
 
             if (FindObjectOfType<CharacterController>().myCol.enabled)
             {
@@ -40,6 +44,7 @@ public class DogAi : BaseAi
                     ActivateAllNearbyDogs();
                     myInfo.haveDetectedPlayer = true;
                     myInfo.myAnimator.SetBool("Attack", attacking);
+
                     if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask) || attacking)
                     {
                         if (!attacking)
@@ -49,6 +54,11 @@ public class DogAi : BaseAi
                     {
                         if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask))
                             moveTowardPlayer(myInfo.myRB2D, FindObjectOfType<CharacterController>().transform, myInfo.movementSpeed);
+                        if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, preAttackIndicatorRange, myInfo.playerMask))
+                        {
+                            if(!preAttackSound.isPlaying)
+                                preAttackSound.Play();
+                        }
                     }
                     if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask) && attacking)
                     {
@@ -130,9 +140,19 @@ public class DogAi : BaseAi
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.GetComponent<CharacterController>() && attacking && canNotKillPlayer)
+        if (collision.transform.GetComponent<CharacterController>() && attacking)
         {
-            collision.transform.GetComponent<CharacterController>().playerDead();
+            CharacterController tempCC = collision.transform.GetComponent<CharacterController>();
+            bool stomped = false;
+            foreach (Collider2D enemy in tempCC.stompedEnemies)
+            {
+                if (enemy == this)
+                {
+                    stomped = true;
+                }
+            }
+            if(!stomped)
+                collision.transform.GetComponent<CharacterController>().playerDead();
         }
 
         if (collision.transform.GetComponent<EnemyInfo>())
@@ -146,6 +166,9 @@ public class DogAi : BaseAi
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, callOtherDogsRange);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, preAttackIndicatorRange);
     }
 
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    private float lerpAnimationTime = 3;
+    private float lerpAnimationTime = 1;
     [HideInInspector] public Vector3 lastCheckpoint;
     //[SerializeField] private Transform[] partsTransform;
     [SerializeField] private CharacterController playerCC;
@@ -55,7 +55,8 @@ public class PlayerRespawn : MonoBehaviour
         for (int i = 0; i < partsCollider.Length; i++)
         {
             partsCollider[i].transform.SetParent(partsParent[i]);
-            startLocalPosition[i] = partsCollider[i].transform.localPosition;
+            Vector3 tempPos = partsCollider[i].transform.localPosition;
+            startLocalPosition[i] = tempPos;
             startLocalRotation[i] = partsCollider[i].transform.localRotation;
             Destroy(partsCollider[i].GetComponent<Rigidbody2D>());
             if(partsCollider[i].transform != playerCC.myRLC.rocket)
@@ -69,10 +70,12 @@ public class PlayerRespawn : MonoBehaviour
         float timer = 0;
         Camera.main.transform.SetParent(transform);
         Vector3 playerDeathPos = transform.position;
-        lastCheckpoint.y += 1f;
+        lastCheckpoint.y += 0.5f;
+        lastCheckpoint.z = 0;
+        transform.position = lastCheckpoint;
         while (timer < lerpAnimationTime)
         {
-            transform.position = Vector3.Lerp(playerDeathPos, lastCheckpoint, timer / lerpAnimationTime);
+            //transform.position = Vector3.Lerp(playerDeathPos, lastCheckpoint, timer / lerpAnimationTime);
             for (int i = 0; i < partsCollider.Length; i++)
             {
                 partsCollider[i].transform.localPosition = Vector3.Lerp(startLocalPosition[i], partsDefaultLocalPosition[i], timer/lerpAnimationTime);

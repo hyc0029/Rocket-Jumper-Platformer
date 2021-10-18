@@ -5,6 +5,7 @@ using UnityEngine;
 public class StompKill : MonoBehaviour
 {
     CharacterController CC;
+    [SerializeField] private AudioSource stompSound;
 
     private void Start()
     {
@@ -14,10 +15,17 @@ public class StompKill : MonoBehaviour
     private void Update()
     {
         CC.onEnemyCheck();
-        if (CC.stompedEnemies.Length > 0)
+        if (CC.myCol.enabled)
         {
-            foreach (Collider2D enemy in CC.stompedEnemies)
-                enemy.GetComponent<EnemyInfo>().health = 0;
+            if (CC.stompedEnemies.Length > 0 && !CC.groundCheck())
+            {
+                stompSound.Play();
+                foreach (Collider2D enemy in CC.stompedEnemies)
+                    enemy.GetComponent<EnemyInfo>().health = 0;
+                Vector3 playerVel = CC.playerRigidbody.velocity;
+                playerVel.y = 30;
+                CC.playerRigidbody.velocity = playerVel;
+            }
         }
     }
 

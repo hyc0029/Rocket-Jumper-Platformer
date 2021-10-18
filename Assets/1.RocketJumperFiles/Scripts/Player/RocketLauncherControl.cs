@@ -19,6 +19,7 @@ public class RocketLauncherControl : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image chargeImg;
     [SerializeField] private ParticleSystem chargingRocketParticle;
     [SerializeField] private AudioSource chargingRocketSound;
+    [SerializeField] private AudioSource fullyChargeSound;
     [SerializeField] private SpriteRenderer LauncherSR;
     [SerializeField] private Color newClr;
     [SerializeField] private Color originalClr;
@@ -115,6 +116,8 @@ public class RocketLauncherControl : MonoBehaviour
                 {
                     chargeImg.fillAmount = 1;
                     chargingRocketParticle.Stop();
+                    if(!fullyChargeSound.isPlaying)
+                        fullyChargeSound.Play();
                 }
                 else
                 {

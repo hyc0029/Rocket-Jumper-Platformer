@@ -9,12 +9,18 @@ public class RobotAi : BaseAi
     [Header("Aiming")]
     [SerializeField] private Transform myArm;
     [SerializeField] private float aimTime = 1f;
+    [SerializeField] private Transform hand;
+    [SerializeField] private LineRenderer aimLine;
+    [SerializeField] private Color orange;
+    [SerializeField] private float minWidth;
+    [SerializeField] private float maxWidth;
     private float aimTimer;
     private bool attacking;
 
     [Header("Firing")]
     [SerializeField] private GameObject projectile;
     [SerializeField] private Vector2 projectileOffset;
+    [SerializeField] private AudioSource fireSound;
 
     [Header("Projectile")]
     public float projectileSpeed;
@@ -24,6 +30,7 @@ public class RobotAi : BaseAi
     private void Start()
     {
         myInfo = GetComponent<EnemyInfo>();
+        aimLine.enabled = false;
     }
 
 
@@ -47,6 +54,8 @@ public class RobotAi : BaseAi
                     {
                         if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask))
                             moveTowardPlayer(myInfo.myRB2D, FindObjectOfType<CharacterController>().transform, myInfo.movementSpeed);
+
+                        aimLine.enabled = false;
                     }
                 }
             }
@@ -54,8 +63,12 @@ public class RobotAi : BaseAi
             {
                 myInfo.haveDetectedPlayer = false;
                 patrolling();
+                aimLine.enabled = false;
             }
-            myInfo.myAnimator.SetFloat("xVelocity", Mathf.Abs(myInfo.myRB2D.velocity.x));
+            if(!attacking)
+                myInfo.myAnimator.SetFloat("xVelocity", Mathf.Abs(myInfo.myRB2D.velocity.x));
+            else
+                myInfo.myAnimator.SetFloat("xVelocity", 0);
         }
         else
         {
@@ -90,9 +103,21 @@ public class RobotAi : BaseAi
         attacking = true;
         Vector2 playerPos = (Vector2)FindObjectOfType<CharacterController>().transform.position;
 
+        aimLine.enabled = true;
+
+        float newWidth = Mathf.Lerp(minWidth, maxWidth, aimTimer / aimTime);
+        Color newClr = Color.Lerp(Color.white, orange, aimTimer / aimTime);
+        aimLine.startWidth = newWidth;
+        aimLine.endWidth = newWidth;
+        aimLine.startColor = newClr;
+        aimLine.endColor = newClr;
         playerPos.y += 5;
 
         Vector2 vectorToTarget = playerPos - (Vector2)myArm.position;
+
+        aimLine.SetPosition(0, myArm.position);
+        aimLine.SetPosition(1, playerPos);
+
         float angle;
 
         if (Mathf.Round(transform.GetChild(0).localEulerAngles.y) == 0)
@@ -114,6 +139,8 @@ public class RobotAi : BaseAi
 
     void ShootAtPlayer()
     {
+        aimLine.enabled = false;
+        fireSound.Play();
         RobotEnergyBall thisEnergyBall =  Instantiate(projectile, myArm.TransformPoint(projectileOffset), myArm.rotation * Quaternion.AngleAxis(-90, Vector3.forward)).GetComponent<RobotEnergyBall>();
         thisEnergyBall.myRobot = this;
         thisEnergyBall.gameObject.SetActive(true);

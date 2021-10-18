@@ -71,6 +71,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3516878927245991091, guid: 153a1e0718993a24980679a789274c49, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4110698425974566529, guid: 153a1e0718993a24980679a789274c49, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -562,6 +566,10 @@ PrefabInstance:
     - target: {fileID: 6416893603840670737, guid: ea55c83555ac3c3479c10c9a925efb3b, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931891676095665293, guid: ea55c83555ac3c3479c10c9a925efb3b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea55c83555ac3c3479c10c9a925efb3b, type: 3}
