@@ -22,8 +22,11 @@ public class RocketLauncherControl : MonoBehaviour
     [SerializeField] private AudioSource fullyChargeSound;
     [SerializeField] private SpriteRenderer LauncherSR;
     [SerializeField] private Color newClr;
-    [SerializeField] private Color originalClr;
-
+    private Color originalClr;
+    [SerializeField] private Color newClrChargeBar;
+    private Color flashColor;
+    private Color originalClrChargeBar;
+    [SerializeField] private AudioSource cantFireClick;
     private float currentHoldTime;
     private float timePerIncreaseForce;
     private int currentSelectedForce;
@@ -67,6 +70,9 @@ public class RocketLauncherControl : MonoBehaviour
         leftShoulderAngleDiff = rightShoulderInitialAngle - leftShoulderInitialAngle;
         timePerIncreaseForce = maxHoldTime / (forces.Length-1);
         chargingRocketParticle.Stop();
+        originalClrChargeBar = chargeImg.color;
+        flashColor = newClrChargeBar;
+        flashColor.a = 0.1f;
     }
 
     // Update is called once per frame
@@ -107,6 +113,7 @@ public class RocketLauncherControl : MonoBehaviour
     {
         if (canFireRocket)
         {
+            chargeImg.color = originalClrChargeBar;
             if (Input.GetMouseButton(0) && currentHoldTime < maxHoldTime)
             {
                 currentHoldTime += Time.deltaTime;
@@ -144,11 +151,16 @@ public class RocketLauncherControl : MonoBehaviour
                 origialFillAmount = chargeImg.fillAmount;
                 chargingRocketParticle.Stop();
                 canFireRocket = false;
+                chargeImg.color = newClrChargeBar;
             }
         }
         else
         {
             chargeImg.fillAmount = Mathf.Lerp(origialFillAmount, 0, timeBetweenShotsTimer / actualTimeBetweenShots);
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartCoroutine(chargeBarFlash());
+            }
             if (timeBetweenShotsTimer < actualTimeBetweenShots)
                 timeBetweenShotsTimer += Time.deltaTime;
             else
@@ -156,7 +168,27 @@ public class RocketLauncherControl : MonoBehaviour
                 canFireRocket = true;
                 LauncherSR.material.SetColor("_EmissionColor", originalClr);
             }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                cantFireClick.Play();
+            }
         }
+    }
+
+    public void resetRLC()
+    {
+        timeBetweenShotsTimer = 0;
+        chargeImg.fillAmount = 0;
+        currentHoldTime = 0;
+        currentSelectedForce = 0;
+    }
+
+    IEnumerator chargeBarFlash()
+    {
+        chargeImg.color = flashColor;
+        yield return new WaitForSeconds(0.1f);
+        chargeImg.color = newClrChargeBar;
     }
 
     private void OnDrawGizmos()

@@ -1886,7 +1886,7 @@ MonoBehaviour:
   detectionRange: 50
   playerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 32896
   haveDetectedPlayer: 0
   attackRange: 70
 --- !u!114 &2194355090930757500

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3340891984966486598}
   - component: {fileID: 3160819817332105119}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 5642194185754974589}
   - component: {fileID: 2244273434623635399}
   - component: {fileID: 8588440231348519817}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnergyBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

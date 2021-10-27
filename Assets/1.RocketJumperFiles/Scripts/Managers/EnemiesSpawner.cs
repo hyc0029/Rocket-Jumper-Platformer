@@ -11,11 +11,15 @@ public class EnemiesSpawner : MonoBehaviour
     [Header("Dog")]
     [SerializeField] private GameObject dog;
     [SerializeField] private Collider2D dogCol;
+    private Vector2 dogOffset;
+    private Vector2 dogSize;
     [SerializeField] private Vector2[] dogPositions;
 
     [Header("Robot")]
     [SerializeField] private GameObject robot;
     [SerializeField] private Collider2D robotCol;
+    private Vector2 robotOffset;
+    private Vector2 robotSize;
     [SerializeField] private Vector2[] robotPositions;
 
     private int maxSpawnCount;
@@ -25,6 +29,10 @@ public class EnemiesSpawner : MonoBehaviour
     private void Start()
     {
         maxSpawnCount = dogPositions.Length + robotPositions.Length;
+        dogOffset = dogCol.offset;
+        dogSize = dogCol.bounds.size;
+        robotOffset = robotCol.offset;
+        robotSize = robotCol.bounds.size;
         dog.SetActive(false);
         robot.SetActive(false);
     }
@@ -71,7 +79,7 @@ public class EnemiesSpawner : MonoBehaviour
             for (int i = 0; i < dogPositions.Length; i++)
             {
                 Gizmos.color = Color.red;
-                Gizmos.DrawCube(dogPositions[i] + dogCol.offset, dogCol.bounds.size);
+                Gizmos.DrawCube(dogPositions[i] + dogOffset, dogSize);
             }
         }
         if (robotPositions.Length > 0)
@@ -79,7 +87,7 @@ public class EnemiesSpawner : MonoBehaviour
             for (int i = 0; i < robotPositions.Length; i++)
             {
                 Gizmos.color = Color.red;
-                Gizmos.DrawCube(robotPositions[i] + robotCol.offset, robotCol.bounds.size);
+                Gizmos.DrawCube(robotPositions[i] + robotOffset, robotSize);
             }
         }
         

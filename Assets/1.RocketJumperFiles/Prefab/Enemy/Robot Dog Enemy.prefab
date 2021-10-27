@@ -1924,7 +1924,7 @@ MonoBehaviour:
   groundCheckSize: {x: 5, y: 0.5}
   groundMask:
     serializedVersion: 2
-    m_Bits: 576
+    m_Bits: 64
   forwardDetectionOrigin: {x: 0, y: 1}
   changeMovingDirectionDtectionRange: 6
   forwardGroundDetectionOrigin: {x: 6, y: 1}
@@ -1939,7 +1939,7 @@ MonoBehaviour:
   detectionRange: 35
   playerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 32896
   haveDetectedPlayer: 0
   attackRange: 25
 --- !u!114 &6972515466725265410
@@ -1954,7 +1954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdfca336fa8b7a408e5447c25312fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1500
+  jumpForce: 2000
   upwardModifier: 10
   preAttackIndicatorRange: 30
   preAttackSound: {fileID: 413427816368432093}
@@ -1975,7 +1975,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dfe48477f3259144e90582754128fd8d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0

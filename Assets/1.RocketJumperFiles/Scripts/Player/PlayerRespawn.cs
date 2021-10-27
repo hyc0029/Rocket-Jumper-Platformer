@@ -50,6 +50,7 @@ public class PlayerRespawn : MonoBehaviour
 
     public void ResetPlayer()
     {
+        playerCC.myRLC.resetRLC();
         startLocalPosition = new Vector3[partsCollider.Length];
         startLocalRotation = new Quaternion[partsCollider.Length];
         for (int i = 0; i < partsCollider.Length; i++)
@@ -92,6 +93,8 @@ public class PlayerRespawn : MonoBehaviour
         List<EnemiesSpawner> spawners = new List<EnemiesSpawner>(FindObjectsOfType<EnemiesSpawner>());
         foreach (EnemiesSpawner spawner in spawners)
             spawner.currentCount = 0;
+
+        playerCC.playerRigidbody.velocity = Vector3.zero;
 
         yield return null;
     }

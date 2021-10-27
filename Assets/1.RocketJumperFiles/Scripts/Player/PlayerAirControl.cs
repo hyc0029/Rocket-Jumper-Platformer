@@ -9,6 +9,7 @@ public class PlayerAirControl : MonoBehaviour
     CharacterController cc;
     [SerializeField] private float airControlForce;
     [SerializeField] private float groundedMoveSpeed;
+    [SerializeField] [Range(0, 1)] private float extraControlPrecentage;
     [SerializeField] private ParticleSystem forwardThrustParticle;
     [SerializeField] private ParticleSystem backwardThrustParticle;
     [SerializeField] private AudioSource thrustSound;
@@ -24,7 +25,7 @@ public class PlayerAirControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cc.myCol.enabled)
+        if (cc.myCol.enabled && Time.timeScale != 0)
         {
             leftRight = Input.GetKey(KeyCode.D) ? 1 : 0 - (Input.GetKey(KeyCode.A) ? 1 : 0);
 
@@ -67,7 +68,10 @@ public class PlayerAirControl : MonoBehaviour
         if (!cc.groundCheck())
         {
             Vector2 velocity = playerRb.velocity;
-            velocity.x += leftRight*((airControlForce + 0.1f * playerRb.velocity.x) * Time.fixedDeltaTime);
+            if (Vector2.Dot(transform.GetChild(0).right * leftRight, transform.right) > 0)
+                velocity.x += leftRight * ((airControlForce + 0.1f * Mathf.Abs(playerRb.velocity.x)) * Time.fixedDeltaTime);
+            else if(Vector2.Dot(transform.GetChild(0).right * leftRight, transform.right) < 0)
+                velocity.x += leftRight * ((airControlForce + extraControlPrecentage * Mathf.Abs(playerRb.velocity.x)) * Time.fixedDeltaTime);
             playerRb.velocity = velocity;
         }
     }

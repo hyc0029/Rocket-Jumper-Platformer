@@ -45,7 +45,7 @@ public class DogAi : BaseAi
                     myInfo.haveDetectedPlayer = true;
                     myInfo.myAnimator.SetBool("Attack", attacking);
 
-                    if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask) || attacking)
+                    if (detectPlayer(transform.GetChild(0), myInfo.myEyeTrans, myInfo.attackRange, myInfo.playerMask))
                     {
                         if (!attacking)
                             jumpToPlayer();
@@ -60,7 +60,8 @@ public class DogAi : BaseAi
                                 preAttackSound.Play();
                         }
                     }
-                    if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask) && attacking)
+                    
+                    if (groundCheck(transform.GetChild(0), myInfo.groundCheckPosition, myInfo.groundCheckSize, myInfo.groundMask) && attacking && myInfo.myRB2D.velocity.y < 0)
                     {
                         attacking = false;
                     }
@@ -113,7 +114,10 @@ public class DogAi : BaseAi
         myInfo.myRB2D.velocity = Vector2.zero;
         
         Vector2 jumpDir = FindObjectOfType<CharacterController>().transform.position - transform.position;
-        jumpDir.y += upwardModifier;
+        if (jumpDir.y <= 5)
+            jumpDir.y += upwardModifier;
+        else
+            jumpDir.y += 1;
         jumpDir.Normalize();
 
         myInfo.myRB2D.AddForce(jumpDir * jumpForce, ForceMode2D.Impulse);

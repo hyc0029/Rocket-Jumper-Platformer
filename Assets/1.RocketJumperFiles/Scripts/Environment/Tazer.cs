@@ -63,11 +63,4 @@ public class Tazer : MonoBehaviour
         myAudioSource.volume = Mathf.Lerp(0, maxVolume, 1 - Mathf.Clamp((closestBlock / RangeOfSound), 0, 1));
 
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireSphere(block1.position, RangeOfSound);
-        Gizmos.DrawWireSphere(block2.position, RangeOfSound);
-    }
 }

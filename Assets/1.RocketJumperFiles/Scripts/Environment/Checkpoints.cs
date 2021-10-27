@@ -8,6 +8,7 @@ public class Checkpoints : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private Color notActivated;
     [SerializeField] private Color activated;
+    [SerializeField] private ParticleSystem activate;
     private SpriteRenderer checkpointSprite;
     private PlayerRespawn playerRespawn;
 
@@ -26,6 +27,7 @@ public class Checkpoints : MonoBehaviour
         {
             playerRespawn.lastCheckpoint = transform.position;
             checkpointSprite.color = activated;
+            activate.Play();
             this.enabled = false;
         }
     }

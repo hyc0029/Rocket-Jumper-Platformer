@@ -177,12 +177,12 @@ public class CharacterController : MonoBehaviour
         }
 
         StartCoroutine(playerDeadScreen());
-
     }
+
 
     IEnumerator playerDeadScreen()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         UiObject.SetActive(true);
         Time.timeScale = 0;
     }

@@ -17,7 +17,7 @@ public class CursorController : MonoBehaviour
     [SerializeField] private Image cursorImg; 
     [SerializeField] private int currentCursor;
     [SerializeField] private List<CursorInformation> cursorInformations;
-    [SerializeField] private GameObject pause;
+    [SerializeField] private CanvasGroup pause;
 
 
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class CursorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pause.activeSelf)
+        if (pause.alpha == 1)
             currentCursor = 0;
         else
             currentCursor = 1;
