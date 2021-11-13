@@ -71,9 +71,10 @@ public class PlayerRespawn : MonoBehaviour
         float timer = 0;
         Camera.main.transform.SetParent(transform);
         Vector3 playerDeathPos = transform.position;
-        lastCheckpoint.y += 0.5f;
-        lastCheckpoint.z = 0;
-        transform.position = lastCheckpoint;
+        Vector3 respawnPos = lastCheckpoint;
+        respawnPos.y += 0.5f;
+        respawnPos.z = 0;
+        transform.position = respawnPos;
         while (timer < lerpAnimationTime)
         {
             //transform.position = Vector3.Lerp(playerDeathPos, lastCheckpoint, timer / lerpAnimationTime);

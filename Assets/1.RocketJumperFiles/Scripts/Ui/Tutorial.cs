@@ -10,8 +10,7 @@ public class Tutorial : MonoBehaviour
     private BoxCollider2D myCol;
     [SerializeField] private Vector2 boxSize;
     [SerializeField] private string TextToDisplay;
-    [SerializeField] private TextMeshProUGUI uiTMP;
-
+    private TextMeshProUGUI uiTMP;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +19,7 @@ public class Tutorial : MonoBehaviour
         myCol.size = boxSize;
         uiTMP = GameObject.FindGameObjectWithTag("Tutorial").GetComponent<TextMeshProUGUI>();
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

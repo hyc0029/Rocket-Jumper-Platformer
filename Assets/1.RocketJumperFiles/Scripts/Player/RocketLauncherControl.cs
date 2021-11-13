@@ -113,7 +113,6 @@ public class RocketLauncherControl : MonoBehaviour
     {
         if (canFireRocket)
         {
-            chargeImg.color = originalClrChargeBar;
             if (Input.GetMouseButton(0) && currentHoldTime < maxHoldTime)
             {
                 currentHoldTime += Time.deltaTime;
@@ -137,21 +136,20 @@ public class RocketLauncherControl : MonoBehaviour
             else if (Input.GetMouseButtonUp(0))
             {
                 if (chargingRocketSound.isPlaying)
+                {
                     chargingRocketSound.Stop();
+                    chargingRocketParticle.Stop();
+                }
                 fireRocketSound.Play();
                 if (currentSelectedForce >= forces.Length)
                     currentSelectedForce = forces.Length - 1;
                 actualTimeBetweenShots = timeBetweenShots + additionalTimeBetweenShots * currentSelectedForce;
                 forceToApply = forces[currentSelectedForce];
                 Instantiate(rocketToBeFired, rocket.TransformPoint((Vector3)rocketSpawnOffset), rocket.rotation);
-                currentHoldTime = 0;
-                currentSelectedForce = 0;
-                timeBetweenShotsTimer = 0;
                 LauncherSR.material.SetColor("_EmissionColor", newClr);
                 origialFillAmount = chargeImg.fillAmount;
-                chargingRocketParticle.Stop();
-                canFireRocket = false;
                 chargeImg.color = newClrChargeBar;
+                canFireRocket = false;
             }
         }
         else
@@ -160,19 +158,21 @@ public class RocketLauncherControl : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 StartCoroutine(chargeBarFlash());
+                cantFireClick.Play();
             }
+
             if (timeBetweenShotsTimer < actualTimeBetweenShots)
                 timeBetweenShotsTimer += Time.deltaTime;
             else
             {
                 canFireRocket = true;
+                chargeImg.color = originalClrChargeBar;
                 LauncherSR.material.SetColor("_EmissionColor", originalClr);
+                timeBetweenShotsTimer = 0;
+                currentHoldTime = 0;
+                currentSelectedForce = 0;
             }
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                cantFireClick.Play();
-            }
         }
     }
 

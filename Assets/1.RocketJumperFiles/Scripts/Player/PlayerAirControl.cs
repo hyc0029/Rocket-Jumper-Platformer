@@ -65,7 +65,7 @@ public class PlayerAirControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!cc.groundCheck())
+        if (!cc.groundCheck() && cc.myCol.enabled)
         {
             Vector2 velocity = playerRb.velocity;
             if (Vector2.Dot(transform.GetChild(0).right * leftRight, transform.right) > 0)

@@ -6,6 +6,7 @@ public class Rocket : MonoBehaviour
 {
     Rigidbody2D myRB2D;
     RocketLauncherControl rlc;
+    CharacterController myCC;
     protected ContactFilter2D cf;
     Vector2 explosionPoint;
     bool exploded;
@@ -19,19 +20,21 @@ public class Rocket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        exploded = false;
         myRB2D = GetComponent<Rigidbody2D>();
         rlc = FindObjectOfType<RocketLauncherControl>();
         myRB2D.velocity = transform.right * rlc.rocketSpeed;
         cf.useLayerMask = true;
         cf.SetLayerMask(rlc.layerToCollideWith);
-        explosionParticleSystem.gameObject.SetActive(false);
+        //explosionParticleSystem.gameObject.SetActive(false);
         oldPos = transform.position;
+        myCC = FindObjectOfType<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rlc.GetComponent<CharacterController>().myCol.enabled)
+        if (myCC.myCol.enabled)
         {
             if (!exploded)
                 RocketHitDetection();
@@ -52,12 +55,13 @@ public class Rocket : MonoBehaviour
 
     void RocketHitDetection()
     {
-        List<RaycastHit2D> circleHits = new List<RaycastHit2D>();
+        List<RaycastHit2D> hits = new List<RaycastHit2D>();
         //Physics2D.CircleCast(transform.position - transform.right * rlc.lengthOfDetectionRay, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay);
-        Physics2D.CircleCast(oldPos, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay*2);
-        if (circleHits.Count > 0)
+        Physics2D.Raycast(oldPos, transform.right, cf, hits, Vector2.Distance(transform.position, oldPos));
+        //Physics2D.CircleCast(oldPos, rlc.sizeOfCast, transform.right, cf, hits, rlc.lengthOfDetectionRay*2);
+        if (hits.Count > 0)
         {
-            explosionPoint = circleHits[0].point;
+            explosionPoint = hits[0].point;
             RocketExplosion();
             RocketExplosionEffect();
         }
@@ -116,6 +120,8 @@ public class Rocket : MonoBehaviour
                 else if (col.GetComponent<EnemyInfo>())
                 {
                     col.GetComponent<EnemyInfo>().health -= 1;
+                    if (col.GetComponent<EnemyInfo>().health > 0)
+                        col.GetComponent<EnemyInfo>().haveDetectedPlayer = true;
                 }
                 else if (col.GetComponent<DestructableEnvironment>())
                 {
@@ -132,28 +138,8 @@ public class Rocket : MonoBehaviour
         explosionSound.Play();
         rocketParticleSystem.transform.parent.gameObject.SetActive(false);
         transform.position = explosionPoint;
-        explosionParticleSystem.gameObject.SetActive(true);
+        //explosionParticleSystem.gameObject.SetActive(true);
         explosionParticleSystem.Play();
     }
-
-
-
-
-    private void OnDrawGizmos()
-    {
-        if (rlc != null)
-        {
-            List<RaycastHit2D> circleHits = new List<RaycastHit2D>();
-            Physics2D.CircleCast(transform.position - transform.right * rlc.lengthOfDetectionRay, rlc.sizeOfCast, transform.right, cf, circleHits, rlc.lengthOfDetectionRay);
-            Gizmos.color = Color.green;
-            if (circleHits.Count > 0)
-            {
-                Gizmos.DrawLine(transform.position - transform.right * rlc.lengthOfDetectionRay, circleHits[0].point);
-                Gizmos.DrawWireSphere(transform.position + transform.right * (circleHits[0].point - (Vector2)transform.position).magnitude, rlc.sizeOfCast);
-                Gizmos.DrawWireSphere(explosionPoint, rlc.explosionRadius);
-            }
-        }
-    }
-
 
 }
